@@ -29,7 +29,7 @@ const Carousel: React.FC<{ image: StaticImageData[] }> = ({ image }) => {
   }, [currentIndex])
 
   return (
-    <div className='relative transition-opacity duration-500 ease-in-out ' style={{ opacity: isTransitioning ? 0 : 1 }}>
+    <div className='relative transition-opacity duration-500 ease-in-out w-full ' style={{ opacity: isTransitioning ? 0 : 1 }}>
       <div className='flex' style={{ opacity: isTransitioning ? 0 : 1 }}>
         <Image loading="eager" src={image[currentIndex]} alt='' className='object-cover w-full h-[80vw] object-top md:h-[50vw]' />
       </div>
