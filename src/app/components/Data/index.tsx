@@ -1,33 +1,78 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react';
+import CountUp from 'react-countup';
 
-const Data = () => {
+const Data: React.FC = () => {
+  const [startCount, setCount] = useState(false)
+
+  useEffect(() => {
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setCount(true);
+        }
+      });
+    };
+    const options = {
+      threshold: 0
+    };
+    const observer = new IntersectionObserver(handleIntersection, options);
+    const target = document.getElementById('triggerElement');
+    if (target) {
+      observer.observe(target);
+    }
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <div className='px-20 py-10 bg-slate-50'>
-      <div className='flex flex-col gap-12 py-8 relative rounded-md' style={{ backgroundImage: "url('/slide4.jpg')" }}>
-        <h2 className='text-center text-4xl text-white font-DM-Sans font-semibold z-20'>We develops strategic software solutions for business</h2>
-        <div className="flex flex-col text-center gap-8 justify-between px-10 z-20 md:flex-row ">
-          <div className="item">
-            <h2 className='text-blue-300 text-6xl font-bold'>2003</h2>
-            <p className='text-white'>Year of Establishment</p>
+    <div className='px-20 py-10 bg-slate-50' id='triggerElement'>
+      <div className='grid grid-cols-1 items-center gap-12 py-8 relative rounded-md md:grid-cols-2'>
+        <h2 className='text-center text-4xl text-blue-600 font-DM-Sans font-semibold z-20'>We develops strategic software solutions for business</h2>
+        <div className="text-center grid grid-cols-1 justify-between  gap-2  w-full md:grid-cols-2 ">
+          <div className="item p-6 bg-blue-500 rounded-md">
+            {startCount && (
+              <CountUp end={2003} start={0} duration={5} className='text-white text-6xl font-bold' />
+            )}
+            <p className='text-white text-xl'>Year of Establishment</p>
           </div>
-          <div className="item">
-            <h2 className='text-blue-300 text-6xl font-bold'>2,5k+</h2>
-            <p className='text-white'>of customers worldwide</p>
+          <div className="item p-6 bg-blue-500 rounded-md">
+            <div className="text-white text-6xl font-bold">
+              {startCount && (
+                <CountUp end={4.5} separator=""
+                  decimals={1}
+                  decimal="," start={0} duration={5} />
+              )}
+              {'k+'}
+            </div>
+            <p className='text-white text-xl'>of customers worldwide</p>
           </div>
-          <div className="item">
-            <h2 className='text-blue-300 text-6xl font-bold'>14+</h2>
-            <p className='text-white'>Countries with active
+          <div className="item p-6 bg-blue-500 rounded-md">
+            <div className="text-white text-6xl font-bold">
+              {startCount && (
+                <CountUp end={14} separator=""
+                  start={0} duration={5} />
+              )}
+              {'+'}
+            </div>
+            <p className='text-white text-xl'>Countries with active
               client base</p>
           </div>
-          <div className="item">
-            <h2 className='text-blue-300 text-6xl font-bold'>4.9/5</h2>
-            <p className='text-white'>Customer
+          <div className="item p-6 bg-blue-500 rounded-md">
+            <div className="text-white text-6xl font-bold">
+              {startCount && (
+                <CountUp end={4.9} separator=""
+                  decimals={1}
+                  decimal="," start={0} duration={5} />)}
+              {'/5'}
+            </div>
+
+            <p className='text-white text-xl'>Customer
               rating</p>
           </div>
         </div>
-
-        <span className='absolute w-full h-full bg-gradient-to-r from-indigo-600 via-purple-500 to-blue-800 top-0 opacity-90 rounded-md'></span>
-
+        {/* <span className='absolute w-full h-full bg-gradient-to-r from-indigo-600 via-purple-500 to-blue-800 top-0 opacity-90 rounded-md'></span> */}
       </div>
     </div>
   )

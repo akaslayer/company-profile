@@ -5,7 +5,7 @@ import Carousel from './components/Caorusel'
 
 
 const slides = [
-  slide3, slide1
+  slide1, slide3
 ]
 
 const Hero = () => {
