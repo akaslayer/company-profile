@@ -14,7 +14,7 @@ const NavBar = () => {
   }
   return (
     <>
-      <div className="navBar border-black border-solid border-1 shadow-md fixed w-full z-10 bg-white ">
+      <div className="navBar border-black border-solid border-1 shadow-md fixed w-full z-30 bg-white ">
         <nav className='flex items-center justify-between'>
           <div className="logo relative bg-white flex  px-3 py-2 w-1/3 rounded-md md:w-1/5 md:bg-blue-400 md:justify-center">
             <Image src={logo} alt="" className='w-20' loading="eager" />

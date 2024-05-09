@@ -38,7 +38,7 @@ const SideBar = () => {
 
   const buttonDesign = 'bg-transparant w-1/3 m-auto rounded-lg p-3 border-2 border-blue-200 hover:bg-blue-400 hover:text-white'
   return (
-    <div className={`h-full w-full bg-white flex flex-col fixed  z-20  border-blue-300 border-t-2 transition-all  ease in duration-300 ${openSideBar ? 'top-0 ' : 'top-[-100%]'}`} >
+    <div className={`h-full w-full bg-white flex flex-col fixed  z-50  border-blue-300 border-t-2 transition-all  ease in duration-300 ${openSideBar ? 'top-0 ' : 'top-[-100%]'}`} >
       <Image src={x} alt="tanda x" className='w-5 absolute top-8 right-8' onClick={handleOpenSideBar} />
 
       <nav className="flex flex-col gap-12  ">
