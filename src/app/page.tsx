@@ -1,5 +1,7 @@
 import Client from "./components/Client";
+import Data from "./components/Data";
 import Hero from "./components/Hero";
+import Services from "./components/Services";
 
 
 export default function Home() {
@@ -7,6 +9,8 @@ export default function Home() {
     <>
       <Hero />
       <Client />
+      <Services />
+      <Data />
     </>
   );
 }

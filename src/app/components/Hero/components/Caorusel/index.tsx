@@ -1,7 +1,7 @@
 'use client'
 import Image, { StaticImageData } from 'next/image'
 import React, { useEffect, useState } from 'react'
-import { FaChevronLeft, FaChevronRight, FaArrowRight } from 'react-icons/fa'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
 const Carousel: React.FC<{ image: StaticImageData[] }> = ({ image }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

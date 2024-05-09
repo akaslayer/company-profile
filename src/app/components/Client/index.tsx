@@ -29,8 +29,8 @@ const Client = () => {
     <>
       <div className='flex flex-col gap-12 px-8 relative  md:gap-0 bg-slate-200 object-bottom md:px-20' style={{ backgroundImage: "url('/slide1.jpg')" }}>
         <div className="service flex flex-col gap-12 z-30 w-full text-center pt-8  md:-translate-y-1/2 md:flex-row ">
-          {services.map((service) => (
-            <Carousel2 {...service} />
+          {services.map((service, index) => (
+            <Carousel2 key={index} {...service} />
           ))}
         </div>
         <div className="client-list gap-8 pb-24 items-center flex-col flex z-30 overflow-x-hidden md:flex-row">
