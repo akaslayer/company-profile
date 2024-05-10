@@ -102,7 +102,6 @@ const Testimonial: React.FC = () => {
             partialVisibilityGutter: 30
           }
         }}
-
         arrows
         sliderClass=""
         slidesToSlide={1}
@@ -139,9 +138,7 @@ const Testimonial: React.FC = () => {
           </div>
         ))}
       </Carousel>
-
     </div>
-
   )
 }
 

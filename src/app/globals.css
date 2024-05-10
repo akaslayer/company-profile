@@ -12,6 +12,9 @@
 .shape3 {
   clip-path: polygon(0 0, 0% 100%, 100% 100%);
 }
+.shape-team {
+  clip-path: polygon(0 78%, 100% 61%, 100% 100%, 0% 100%);
+}
 
 @layer utilities {
   /* Chrome, Safari and Opera */
