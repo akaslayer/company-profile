@@ -7,7 +7,7 @@ interface CarouselProps {
 
 
 const Carousel2: React.FC<CarouselProps> = ({ icon, name }) => {
-  const iconDesign = "relative flex flex-col items-center bg-white py-10 gap-4 overflow-hidden border-2 border-blue-400 font-bold text-lg text-blue-400  transition-all p-6     md:basis-1/4 hover:bg-blue-400 hover:text-white  hover:bg-white group"
+  const iconDesign = "relative flex flex-col items-center bg-white py-10 gap-4 overflow-hidden border-2 border-blue-400 font-bold text-lg text-blue-400  transition-all p-6  md:basis-1/4 hover:text-white hover:bg-white group"
   return (
     <div className={iconDesign}>
       <span className='z-20'>{icon}</span>

@@ -31,7 +31,7 @@ const DUMMYCARD_DATA = [
 const Services = () => {
   return (
     <div id='services'>
-      <div className='px-20 flex flex-col justify-center  gap-2 py-20'>
+      <div className='p-10 flex flex-col justify-center  gap-2 md:p-20 '>
         <div className="title bg-blue-500 text-center m-auto px-6 py-2 rounded-full font-bold text-white">
           <h4 className=''>~ Our Services ~</h4>
         </div>
