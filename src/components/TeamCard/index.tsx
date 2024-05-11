@@ -19,9 +19,9 @@ const TeamCard: React.FC<TeamProps> = ({ name, position, picture, description })
         <h3 className='font-bold text-xl text-white group-hover:text-black'>{name}</h3>
         <h5 className='font-bold text-lg text-blue-400 group-hover:text-blue-800'>{position}</h5>
       </div>
-      <div className="absolute w-full h-full py-20 px-8 text-white z-30 ease-in duration-200 group-hover:-translate-y-full  text-center flex flex-col gap-5  items-center">
+      <div className="absolute w-full h-full py-14 px-8 text-white z-30 ease-in duration-200 group-hover:-translate-y-full  text-center flex flex-col gap-5  items-center">
         <p className='font-bold'>{description}</p>
-        <Link href="#_" className="relative rounded-full py-2 px-2 overflow-hidden group bg-gradient-to-r from-cyan-500 to-blue-500 w-fit hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-400 text-white transition-all ease-out duration-300 md:px-10">
+        <Link href="#_" className="effect relative rounded-full py-2 px-2 overflow-hidden  bg-gradient-to-r from-cyan-500 to-blue-500 w-fit hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-400 text-white transition-all ease-out duration-300 md:px-10">
           <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white rounded-full opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
           <span className="relative  text-sm font-semibold">Read more</span>
         </Link>

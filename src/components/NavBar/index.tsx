@@ -2,6 +2,7 @@
 import { useStateValue } from '@/context/StateContext'
 import Image from 'next/image'
 import logo from '../../../public/logo2.png'
+import Link from 'next/link'
 
 
 
@@ -20,8 +21,8 @@ const NavBar = () => {
             <Image src={logo} alt="" className='w-20' loading="eager" />
           </div>
           <ul className='gap-20 px-20 font-semibold text-md font-DM-Sans hidden md:flex-row md:flex'>
-            <li className='hover:text-blue-400'>Home</li>
-            <li className='hover:text-blue-400'>About</li>
+            <Link href='/'><li className='hover:text-blue-400'>Home</li></Link>
+            <Link href='/about'><li className='hover:text-blue-400'>About</li></Link>
             <li className='hover:text-blue-400'>Products</li>
             <li className='hover:text-blue-400'>Teams</li>
           </ul>
