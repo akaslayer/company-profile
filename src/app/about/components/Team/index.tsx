@@ -19,7 +19,7 @@ const Teams = () => {
   }, [showCarousel])
   return (
     <>
-      <div className="bg-slate-200 w-full py-40 px-20 flex flex-col gap-2 items-center font-DM-Sans">
+      <div className="bg-slate-200 w-full py-10 px-20 flex flex-col gap-2 items-center font-DM-Sans md:py-40">
         <div className="title flex gap-4 items-center text-center justify-center text-2xl text-blue-800 font-bold">
           <FaWind className='rotate-180' />
           <h1>Team Members</h1>

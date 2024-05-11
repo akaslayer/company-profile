@@ -23,7 +23,7 @@ const Footer = () => {
           </div>
           <p className='text-lg font-semibold'>We work with a passion of taking challenges and creating new ones in advertising sector.</p>
           <div className="newsletterInput flex text-md">
-            <input type="text" className='border-2 border-black py-2 pl-4' placeholder='Your email address' />
+            <input id="email" autoComplete="false" type="text" className='border-2 border-black py-2 pl-4' placeholder='Your email address' />
             <button className='bg-gradient-to-r from-cyan-500 to-blue-500 px-7 border-y-2 border-r-2 border-black py-2'><BiPaperPlane className='
             text-white' /></button>
           </div>

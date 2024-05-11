@@ -5,6 +5,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import StateProvider from "@/context/StateContext";
 import Footer from "@/components/Footer";
+import { NextUIProvider } from "@nextui-org/react";
+import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +26,9 @@ export default function RootLayout({
         <body className={inter.className}>
           <SideBar />
           <NavBar />
-          {children}
+          <Providers>
+            {children}
+          </Providers>
           <Footer />
         </body>
       </StateProvider>

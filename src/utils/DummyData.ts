@@ -28,3 +28,24 @@ export const teamData = [
       'Rachna joined IT Solutions in 2003 and worked in a variety of technical support roles before becoming VP of Network.',
   },
 ]
+
+export const aboutTabsContent = [
+  {
+    id: 1,
+    title: 'History',
+    content:
+      'An integrated information and technology system provider, dedicated to delivering highly effective solutions in the field of Information Systems. Our core business focuses on information technology services, digital transformation and IT infrastructure. Our company started with only 10 (ten) personnel, currently, after years of experience, we are supported by more than 1000 consultants and developers.',
+  },
+  {
+    id: 2,
+    title: 'Vision',
+    content:
+      'Reputable Nation-wide Integrated, Diversified IT and Digital Transformation Solution',
+  },
+  {
+    id: 3,
+    title: 'Mission',
+    content:
+      'We provide a cutting-edge IT and Digital Transformation solution for spesialized industries and consistently add values to retain loyalty to our stakeholders.',
+  },
+]

@@ -1,10 +1,29 @@
 'use client'
-import Image from 'next/image'
-import React from 'react'
-import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css';
-import { CiCloud } from "react-icons/ci";
+import Image from 'next/image';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+
+const CustomLeftArrow: React.FC<{ onClick: () => void }> = ({ onClick }) => (
+  <button
+    className="absolute bottom-1/2 left-0 rounded-full translate-y-1/2 bg-transparent p-2 border-2 border-blue-700 cursor-pointer text-black hover:bg-blue-700 hover:text-white hover:border-blue-700"
+    onClick={onClick}
+  >
+    <BsArrowLeft className='size-5' />
+  </button>
+);
+
+const CustomRightArrow: React.FC<{ onClick: () => void }> = ({ onClick }) => (
+  <button
+    className="absolute bottom-1/2 right-0 rounded-full translate-y-1/2 bg-transparent p-2 border-2 border-blue-700 cursor-pointer text-black hover:bg-blue-700 hover:text-white hover:border-blue-700"
+    onClick={onClick}
+  >
+    <BsArrowRight className='size-5' />
+  </button>
+);
+
+
 
 const Milestone = () => {
   return (
@@ -15,16 +34,14 @@ const Milestone = () => {
         autoPlay={true}
         shouldResetAutoplay={true}
         draggable
+        renderButtonGroupOutside
+        rtl={false}
         customLeftArrow={
-          <button className="absolute bottom-1/2 left-0 rounded-full translate-y-1/2  bg-transparant p-2 border-2 border-blue-700   cursor-pointer text-primary-400 hover:bg-blue-700 hover:text-white hover:border-blue-700">
-            <BsArrowLeft className='size-5 '
-            /></button>
+          <CustomLeftArrow onClick={() => { }} />
 
         }
         customRightArrow={
-          <button className="absolute bottom-1/2 right-0 rounded-full translate-y-1/2  bg-transparant p-2 border-2 border-blue-700   cursor-pointer text-primary-400 hover:bg-blue-700 hover:text-white hover:border-blue-700">
-            <BsArrowRight className='size-5 '
-            /></button>
+          <CustomRightArrow onClick={() => { }} />
         }
 
         keyBoardControl

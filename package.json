@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@madzadev/image-slider": "^2.0.1",
+    "@nextui-org/react": "^2.3.6",
+    "@nextui-org/tabs": "^2.0.29",
     "@tailwindcss/line-clamp": "^0.4.4",
+    "framer-motion": "^11.1.9",
     "next": "14.2.3",
     "react": "^18",
     "react-countup": "^6.5.3",
