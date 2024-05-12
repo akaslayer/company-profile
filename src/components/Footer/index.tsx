@@ -24,7 +24,7 @@ const Footer = () => {
           <p className='text-lg font-semibold'>Subscribe our newsletter to get our latest update & news.</p>
           <div className="newsletterInput flex text-md">
             <input id="email" autoComplete="false" type="text" className='border-2 border-black py-2 pl-4' placeholder='Your email address' />
-            <button name='newsletter' className='bg-gradient-to-r from-cyan-500 to-blue-500 px-7 border-y-2 border-r-2 border-black py-2'><BiPaperPlane className='
+            <button aria-label="newsLetter" className='bg-gradient-to-r from-cyan-500 to-blue-500 px-7 border-y-2 border-r-2 border-black py-2'><BiPaperPlane className='
             text-white' /></button>
           </div>
           <div className="icon flex gap-2">

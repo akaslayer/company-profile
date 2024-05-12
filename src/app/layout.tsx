@@ -1,11 +1,10 @@
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import SideBar from "@/components/SideBar";
+import StateProvider from "@/context/StateContext";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import StateProvider from "@/context/StateContext";
-import Footer from "@/components/Footer";
-import { NextUIProvider } from "@nextui-org/react";
 import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });

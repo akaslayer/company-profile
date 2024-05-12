@@ -36,7 +36,6 @@ const Teams = () => {
               dotListClass=""
               draggable
               infinite
-              className='hidden'
               keyBoardControl
               minimumTouchDrag={80}
               responsive={{

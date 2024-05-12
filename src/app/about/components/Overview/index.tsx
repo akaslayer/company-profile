@@ -10,7 +10,7 @@ import { TbTrophy } from 'react-icons/tb';
 
 const Overview = () => {
   return (
-    <div className='grid grid-cols-1  gap-8 bg-slate-100 pt-40 px-20 pb-8 items-center md:grid-cols-2 '>
+    <div className='grid grid-cols-1  gap-8 bg-slate-100 py-20 px-10 pb-8 items-center md:px-20 md:grid-cols-2 '>
       <div className="flex flex-col gap-5 justify-center md:px-20 ">
         <div className="title flex gap-8 items-center font-bold text-3xl text-blue-600">
           <h3>About Us</h3>
@@ -21,9 +21,9 @@ const Overview = () => {
         <div className="flex w-full flex-col font-DM-Sans">
           <Tabs aria-label="Tabs Variants" variant='underlined' color='primary' size='lg' classNames={{
             tabList: "gap-8 rounded-none font-bold p-0 border-b border-divider border-gray-600",
-            cursor: "w-full bg-blue-400",
+            cursor: "w-full bg-blue-700",
             tab: " px-0 h-12",
-            tabContent: "group-data-[selected=true]:text-blue-400"
+            tabContent: "text-black group-data-[selected=true]:text-blue-700"
           }}>
             {aboutTabsContent.map((value) => (
               <Tab key={value.id} title={value.title} >

@@ -8,6 +8,7 @@ import MilestoneData from './components/MilestoneData';
 
 const CustomLeftArrow: React.FC<{ onClick: () => void }> = ({ onClick }) => (
   <button
+    aria-label="leftButton"
     className="absolute bottom-1/2 left-0 rounded-full translate-y-1/2 bg-transparent p-2 border-2 border-blue-700 cursor-pointer text-black hover:bg-blue-700 hover:text-white hover:border-blue-700"
     onClick={onClick}
   >
@@ -17,6 +18,7 @@ const CustomLeftArrow: React.FC<{ onClick: () => void }> = ({ onClick }) => (
 
 const CustomRightArrow: React.FC<{ onClick: () => void }> = ({ onClick }) => (
   <button
+    aria-label="leftButton"
     className="absolute bottom-1/2 right-0 rounded-full translate-y-1/2 bg-transparent p-2 border-2 border-blue-700 cursor-pointer text-black hover:bg-blue-700 hover:text-white hover:border-blue-700"
     onClick={onClick}
   >
