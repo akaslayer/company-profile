@@ -2,10 +2,9 @@
 import TeamCard from '@/components/TeamCard'
 import { teamData } from '@/utils/DummyData'
 import { useEffect, useState } from 'react'
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import { FaWind } from 'react-icons/fa'
 import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css';
+import 'react-multi-carousel/lib/styles.css'
 
 const Teams = () => {
   const [showCarousel, setShowCarousel] = useState<boolean>(true);

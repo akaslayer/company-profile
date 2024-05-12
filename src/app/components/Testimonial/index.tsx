@@ -56,8 +56,8 @@ const Testimonial: React.FC = () => {
     <div className='bg-grey p-10 grid  gap-10 justify-center md:grid-cols-2 bg-slate-200 items-center md:p-20'>
       <div className="grid-item flex flex-col gap-8 font-DM-Sans">
         <h2 className='bg-white w-fit text-md rounded-full shadow-md shadow-blue-200 py-2 px-4 font-bold text-blue-700  md:text-xl'>Testimonials</h2>
-        <h3 className='text-6xl font-semibold'>Here &apos s what our <span className='text-blue-800'>customers</span> have said.</h3>
-        <p className='text-lg'>Simplified IT is designed to help make sure you and your data is protected and your computer runs it &apos s best. The network Access provides is valuable.</p>
+        <h3 className='text-6xl font-semibold'>Here&apos;s what our <span className='text-blue-800'>customers</span> have said.</h3>
+        <p className='text-lg'>Simplified IT is designed to help make sure you and your data is protected and your computer runs it&apos;s best. The network Access provides is valuable.</p>
         <Link href="#_" className="relative rounded-full py-3 px-6 overflow-hidden group bg-gradient-to-r from-cyan-500 to-blue-500 w-fit hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-400 text-white transition-all ease-out duration-300 md:px-10">
           <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white rounded-full opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
           <span className="relative rounded-full text-lg font-semibold md:text-xl">Our Teams</span>

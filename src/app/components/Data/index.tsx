@@ -33,7 +33,7 @@ const Data: React.FC = () => {
         <div className="text-center grid grid-cols-1 justify-between  gap-2  w-full md:grid-cols-2 ">
           <div className="item p-6 bg-blue-500 rounded-md">
             {startCount && (
-              <CountUp end={2003} start={0} duration={5} className='text-white text-6xl font-bold' />
+              <CountUp end={2018} start={0} duration={5} className='text-white text-6xl font-bold' />
             )}
             <p className='text-white text-xl'>Year of Establishment</p>
           </div>

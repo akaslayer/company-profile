@@ -5,11 +5,12 @@ import Overview from './components/Overview'
 import Pricing from './components/Pricing'
 import Culture from './components/Culture'
 import Jumbotron from '@/components/Jumbotron'
+import AboutJumbotron from './components/AboutJumbotron'
 
 const about = () => {
   return (
     <>
-      <Jumbotron />
+      <AboutJumbotron />
       <Overview />
       <Culture />
       <Teams />

@@ -43,7 +43,7 @@ const Overview = () => {
       <div className="relative h-full w-full flex justify-center items-center ">
         <FaRegCircle className='absolute size-full top-0 -translate-y-[20%] left-0 right-0 z-0 text-blue-400 md:-translate-y-0' />
         <div className="z-20 relative h-fit">
-          <Image src={'/sucess-bg.jpg'} width={500} height={500} alt='' className='' />
+          <Image src={'/sucess-bg.jpg'} width={500} height={500} alt='' className='object-contain' />
           <div className="absolute flex items-center bottom-0 w-full py-2 px-4  rounded-t-[30%]  gap-8  bg-white z-30 md:px-16 ">
             <TbTrophy className=' size-8 md:size-16' color='orange' />
             <div className="flex flex-col font-DM-Sans">

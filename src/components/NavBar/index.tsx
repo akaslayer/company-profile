@@ -23,7 +23,7 @@ const NavBar = () => {
           <ul className='gap-20 px-20 font-semibold text-md font-DM-Sans hidden md:flex-row md:flex'>
             <Link href='/'><li className='hover:text-blue-400'>Home</li></Link>
             <Link href='/about'><li className='hover:text-blue-400'>About</li></Link>
-            <li className='hover:text-blue-400'>Products</li>
+            <Link href='/services'><li className='hover:text-blue-400'>Services</li></Link>
             <li className='hover:text-blue-400'>Teams</li>
           </ul>
           <div className='hamburger h-fit cursor-pointer px-[3px] py-2 rounded-md mr-5 z-40 hover:bg-white md:hidden' onClick={handleOpenSideBar}>
