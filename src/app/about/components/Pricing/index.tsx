@@ -19,8 +19,8 @@ const Pricing = () => {
               <span className='text-lg'> / monthly</span>
             </div>
             <div className="benefit flex flex-col gap-4 px-8 py-4">
-              {data.cover.map((detail) => (
-                <div className="item flex gap-2 items-center">
+              {data.cover.map((detail, index) => (
+                <div key={index} className="item flex gap-2 items-center">
                   {detail.isCover ? <FaCheck color="aqua" /> : <FaX color="aqua" />}
 
                   <p className='text-gray-500 font-medium'>{detail.name}</p>

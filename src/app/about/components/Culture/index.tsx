@@ -15,7 +15,7 @@ const Culture = () => {
         <ol className="list-decimal font-medium">
           <li><strong>Innovation</strong>   : We love new ideas and finding smart solutions to challenges.</li>
           <li><strong>Teamwork</strong>     : We work together, support each other, and achieve great things as a team.</li>
-          <li><strong>Excellence</strong>   : We're all about quality. We aim high and deliver our best every time.</li>
+          <li><strong>Excellence</strong>   : We&apos;re all about quality. We aim high and deliver our best every time.</li>
           <li><strong>Integrity</strong>    : We do things right, with honesty and fairness in everything we do.</li>
           <li><strong>Empowerment</strong>  : We believe in you. We&apos;ll help you grow and succeed in your career.</li>
         </ol>
