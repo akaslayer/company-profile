@@ -21,10 +21,10 @@ const Footer = () => {
             <h2 className='text-2xl font-bold'>Newsletter</h2>
             <span className="absolute left-0 right-0 bottom-0 h-1 w-1/6 bg-blue-500"></span>
           </div>
-          <p className='text-lg font-semibold'>We work with a passion of taking challenges and creating new ones in advertising sector.</p>
+          <p className='text-lg font-semibold'>Subscribe our newsletter to get our latest update & news.</p>
           <div className="newsletterInput flex text-md">
             <input id="email" autoComplete="false" type="text" className='border-2 border-black py-2 pl-4' placeholder='Your email address' />
-            <button className='bg-gradient-to-r from-cyan-500 to-blue-500 px-7 border-y-2 border-r-2 border-black py-2'><BiPaperPlane className='
+            <button name='newsletter' className='bg-gradient-to-r from-cyan-500 to-blue-500 px-7 border-y-2 border-r-2 border-black py-2'><BiPaperPlane className='
             text-white' /></button>
           </div>
           <div className="icon flex gap-2">

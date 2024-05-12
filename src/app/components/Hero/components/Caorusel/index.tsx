@@ -33,10 +33,10 @@ const Carousel: React.FC<{ image: StaticImageData[] }> = ({ image }) => {
       <div className='flex' style={{ opacity: isTransitioning ? 0 : 1 }}>
         <Image loading="eager" src={image[currentIndex]} alt='hero' className='object-cover w-full h-[80vw] object-top md:h-[50vw]' />
       </div>
-      <button onClick={goToPrevSlide} className='left-4 absolute bottom-1/2 translate-y-1/2 p-2  border-2 text-white border-white rounded-full md:p-4 hover:bg-white hover:text-black z-10 '>
+      <button name="chevronLeft" onClick={goToPrevSlide} className='left-4 absolute bottom-1/2 translate-y-1/2 p-2  border-2 text-white border-white rounded-full md:p-4 hover:bg-white hover:text-black z-10 '>
         <FaChevronLeft aria-label='left-button' className='flex w-full size-8  md:size-12' />
       </button>
-      <button onClick={goToNextSlide} className='right-4 absolute bottom-1/2 translate-y-1/2 p-2 border-2 text-white  border-white rounded-full md:p-4 hover:bg-white hover:text-black z-10'>
+      <button name='chevronRight' onClick={goToNextSlide} className='right-4 absolute bottom-1/2 translate-y-1/2 p-2 border-2 text-white  border-white rounded-full md:p-4 hover:bg-white hover:text-black z-10'>
         <FaChevronRight aria-label='right-button' className='flex w-full size-8 md:size-12' />
       </button>
       <div className='shape3 absolute bottom-0 h-full bg-blue-400 opacity-20 left-0 p-16 hidden md:block md:p-40'></div>

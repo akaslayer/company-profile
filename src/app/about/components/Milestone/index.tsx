@@ -1,8 +1,9 @@
 'use client'
-import Image from 'next/image';
+import { milestoneData } from '@/utils/DummyData';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import MilestoneData from './components/MilestoneData';
 
 
 const CustomLeftArrow: React.FC<{ onClick: () => void }> = ({ onClick }) => (
@@ -76,68 +77,10 @@ const Milestone = () => {
         slidesToSlide={1}
         swipeable
       >
-        <div className="flex flex-col items-center gap-3 text-center">
-          <div className='shapeMilestone rounded-full'>
-            <Image src={'/slide1.jpg'} width={500} height={500} alt='' className='object-cover rounded-full h-40 w-40' />
-          </div>
-          <div className="pointer-shape text-center flex justify-center items-center font-bold text-white">
-            <h2 className=''>2022</h2>
-          </div>
-          <h1 className='font-bold text-xl'>Get Award</h1>
-          <p className='text-sm w-4/5'>Our people are held to the highest accountability to ensure you are always satisfied with your results</p>
-        </div>
 
-        <div className="flex flex-col items-center gap-3 text-center">
-          <div className='shapeMilestone rounded-full'>
-            <Image src={'/slide1.jpg'} width={500} height={500} alt='' className='object-cover rounded-full h-40 w-40' />
-          </div>
-          <div className="pointer-shape text-center flex justify-center items-center font-bold text-white">
-            <h2 className=''>2022</h2>
-          </div>
-          <h1 className='font-bold text-xl'>Get Award</h1>
-          <p className='text-sm w-4/5'>Our people are held to the highest accountability to ensure you are always satisfied with your results</p>
-        </div>
-        <div className="flex flex-col items-center gap-3 text-center">
-          <div className='shapeMilestone rounded-full'>
-            <Image src={'/slide1.jpg'} width={500} height={500} alt='' className='object-cover rounded-full h-40 w-40' />
-          </div>
-          <div className="pointer-shape text-center flex justify-center items-center font-bold text-white">
-            <h2 className=''>2022</h2>
-          </div>
-          <h1 className='font-bold text-xl'>Get Award</h1>
-          <p className='text-sm w-4/5'>Our people are held to the highest accountability to ensure you are always satisfied with your results</p>
-        </div>
-        <div className="flex flex-col items-center gap-3 text-center">
-          <div className='shapeMilestone rounded-full'>
-            <Image src={'/slide1.jpg'} width={500} height={500} alt='' className='object-cover rounded-full h-40 w-40' />
-          </div>
-          <div className="pointer-shape text-center flex justify-center items-center font-bold text-white">
-            <h2 className=''>2022</h2>
-          </div>
-          <h1 className='font-bold text-xl'>Get Award</h1>
-          <p className='text-sm w-4/5'>Our people are held to the highest accountability to ensure you are always satisfied with your results</p>
-        </div>
-        <div className="flex flex-col items-center gap-3 text-center">
-          <div className='shapeMilestone rounded-full'>
-            <Image src={'/slide1.jpg'} width={500} height={500} alt='' className='object-cover rounded-full h-40 w-40' />
-          </div>
-          <div className="pointer-shape text-center flex justify-center items-center font-bold text-white">
-            <h2 className=''>2022</h2>
-          </div>
-          <h1 className='font-bold text-xl'>Get Award</h1>
-          <p className='text-sm w-4/5'>Our people are held to the highest accountability to ensure you are always satisfied with your results</p>
-        </div>
-
-        <div className="flex flex-col items-center gap-3 text-center">
-          <div className='shapeMilestone rounded-full'>
-            <Image src={'/slide1.jpg'} width={500} height={500} alt='' className='object-cover rounded-full h-40 w-40' />
-          </div>
-          <div className="pointer-shape text-center flex justify-center items-center font-bold text-white">
-            <h2 className=''>2022</h2>
-          </div>
-          <h1 className='font-bold text-xl'>Get Award</h1>
-          <p className='text-sm w-4/5'>Our people are held to the highest accountability to ensure you are always satisfied with your results</p>
-        </div>
+        {milestoneData.map((data, index) => (
+          <MilestoneData key={index} {...data} />
+        ))}
       </Carousel>
     </div>
   )
