@@ -10,8 +10,8 @@ const Pricing = () => {
       </div>
       <h2 className='text-4xl font-bold text-center'>Our <span className='text-blue-600'>Awesome</span> Pricing</h2>
       <div className="flex flex-col justify-center gap-12 md:flex-row">
-        {PricingData.map((data) => (
-          <div className="flex flex-col basis-1/3  bg-white rounded-lg py-8">
+        {PricingData.map((data, index) => (
+          <div key={index} className="flex flex-col basis-1/3  bg-white rounded-lg py-8">
             <h1 className='font-bold text-lg px-6'>{data.name}</h1>
             <p className='text-gray-500 px-6 pb-4'>{data.description}</p>
             <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-2 text-6xl text-white font-bold text-center flex gap-2 items-center justify-center">
