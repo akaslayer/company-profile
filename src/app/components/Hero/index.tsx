@@ -5,7 +5,8 @@ import Carousel from './components/Caorusel'
 
 
 const slides = [
-  slide1, slide3
+  "https://res.cloudinary.com/dv9bbdl6i/image/upload/v1715571573/slide3_jdcsie.jpg",
+  "https://res.cloudinary.com/dv9bbdl6i/image/upload/v1715578141/slide1_gv2sue.jpg"
 ]
 
 const Hero = () => {

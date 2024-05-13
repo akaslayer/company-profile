@@ -107,13 +107,13 @@ const Testimonial: React.FC = () => {
         slidesToSlide={1}
         swipeable
         customLeftArrow={
-          <button className="absolute bottom-2 right-28 rounded-full  bg-white p-2 border-2 border-black   cursor-pointer text-primary-400 hover:bg-blue-500 hover:text-white hover:border-white">
+          <button aria-label='buttonLeft' className="absolute bottom-2 right-28 rounded-full  bg-white p-2 border-2 border-black   cursor-pointer text-primary-400 hover:bg-blue-500 hover:text-white hover:border-white">
             <BsArrowLeft className='size-6'
             /></button>
 
         }
         customRightArrow={
-          <button className="absolute bottom-2 right-12 rounded-full  bg-white p-2 border-2 border-black   cursor-pointer text-primary-400 hover:bg-blue-500 hover:text-white hover:border-white">
+          <button aria-label='buttonRight' className="absolute bottom-2 right-12 rounded-full  bg-white p-2 border-2 border-black   cursor-pointer text-primary-400 hover:bg-blue-500 hover:text-white hover:border-white">
             <BsArrowRight className='size-6'
             /></button>
         }

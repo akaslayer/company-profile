@@ -27,13 +27,13 @@ const services = [
 const Client = () => {
   return (
     <>
-      <div className='flex flex-col gap-12 px-8 relative  md:gap-0 bg-slate-200 object-bottom md:px-20'>
-        <div className="service flex flex-col gap-12 z-30 w-full text-center pt-8  md:-translate-y-1/2 md:flex-row ">
+      <div className='flex flex-col gap-8 p-5 relative  md:gap-0 bg-slate-200 object-bottom lg:px-20'>
+        <div className="service flex flex-col gap-12 z-30 w-full text-center lg:p-20 top-0  lg:-translate-y-1/2 lg:left-0  lg:flex-row lg:absolute ">
           {services.map((service, index) => (
             <Carousel2 key={index} {...service} />
           ))}
         </div>
-        <div className="client-list gap-8 pb-24 items-center flex-col flex z-30 overflow-x-hidden md:flex-row">
+        <div className="client-list gap-8 py-8 items-center flex-col flex z-30 overflow-x-hidden lg:mt-40 lg:flex-row">
           <h5 className='font-bold text-lg font-DM-Sans w-full text-left md:basis-1/4'>Join over +15.000 happy clients!</h5>
           <div className="no-scrollbar company-logo flex gap-12 overflow-x-scroll scroll-smooth md:basis-3/4">
             <Image src='/BNI.png' alt='' width={120} height={120} loading="eager" />

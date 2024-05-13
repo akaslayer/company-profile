@@ -16,6 +16,11 @@
   clip-path: polygon(0 78%, 100% 61%, 100% 100%, 0% 100%);
 }
 
+.cardAnimation:hover {
+  transform: rotateY(360deg);
+  transition: 2s all ease-in;
+}
+
 .pointer-shape {
   width: 180px;
   height: 40px;

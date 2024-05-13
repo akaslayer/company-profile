@@ -9,7 +9,7 @@ interface jumbotronProps {
 
 const Jumbotron: React.FC<jumbotronProps> = ({ leftContent, rightContent }) => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 items-center'>
+    <div className='grid grid-cols-1 pt-20 md:grid-cols-2 items-center'>
       {leftContent}
       {rightContent}
     </div>
