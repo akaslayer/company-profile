@@ -15,9 +15,9 @@ const ServiceJumbotron = () => {
   )
 
   const rightContent = (
-
-    <Image src={'/bg-jumbotron.jpg'} width={500} height={500} alt='' className=' h-full w-full' loading="eager" layout='relative' />
-
+    <div className="h-full w-full">
+      <Image src={'https://res.cloudinary.com/dv9bbdl6i/image/upload/v1715610694/bg-jumbotron_jimatg.jpg'} width={500} height={500} alt='' className=' h-full w-full ' loading="eager" />
+    </div>
   )
   return (
     <Jumbotron leftContent={leftContent} rightContent={rightContent} />

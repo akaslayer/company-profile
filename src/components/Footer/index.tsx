@@ -40,11 +40,6 @@ const Footer = () => {
             <h2 className='text-2xl font-bold'>Official info</h2>
             <span className="absolute left-0 right-0 bottom-0 h-1 w-1/6 bg-blue-500"></span>
           </div>
-          <div className='flex flex-col gap-2'>
-            <h2 className="font-bold text-lg">Open Hours :</h2>
-            <h5>Mon – Sat: 8 am – 5 pm<br></br>
-              Sunday: CLOSED</h5>
-          </div>
           <div className="contact flex flex-col gap-3">
             <div className="contact-item flex gap-4 items-center">
               <MdLocationOn />
@@ -56,9 +51,14 @@ const Footer = () => {
               <h1>+62 21 446 3623</h1>
             </div>
           </div>
+          <div className='flex flex-col gap-2'>
+            <h2 className="font-bold text-lg flex flex-col gap-0">Open Hours :</h2>
+            <h5>Mon – Sat: 8 am – 5 pm</h5>
+            <h5> Sunday: CLOSED</h5>
+          </div>
 
         </div>
-      </div>
+      </div >
       <h2 className='text-center font-bold py-4 text-blue-900 bg-slate-50'>Copyright © 2024 by PT IT Technology Hendry</h2>
     </div >
   )

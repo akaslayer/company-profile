@@ -1,6 +1,5 @@
 import Jumbotron from '@/components/Jumbotron'
 import Image from 'next/image'
-import React from 'react'
 
 const AboutJumbotron = () => {
   const leftContent = (
@@ -15,9 +14,9 @@ const AboutJumbotron = () => {
   )
 
   const rightContent = (
-    <div className="w-full h-full">
-      <Image src={'/bg-jumbotron.jpg'} width={500} height={500} alt='' className=' h-full w-full' />
-    </div>
+
+    <Image src={'https://res.cloudinary.com/dv9bbdl6i/image/upload/v1715609979/jumbotron-about_ddrvvn.jpg'} width={500} height={500} alt='' className='w-full h-full object-cover ' loading="eager" />
+
   )
   return (
     <Jumbotron leftContent={leftContent} rightContent={rightContent} />

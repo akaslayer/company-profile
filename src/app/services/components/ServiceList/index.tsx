@@ -7,16 +7,16 @@ import 'react-multi-carousel/lib/styles.css'
 
 const ServiceList = () => {
   return (
-    <div className=' font-DM-Sans p-10'>
+    <div className=' font-DM-Sans p-5 bg-slate-100 md:p-10'>
       <h2 className='text-6xl font-bold text-center'>Our <span className='text-blue-700'>Services</span></h2>
-      <div className="flex lg:px-40">
+      <div className="flex md:px-40">
         <Carousel
-          additionalTransfrom={0}
           autoPlaySpeed={5000}
+          swipeable={true}
           autoPlay={true}
           shouldResetAutoplay={false}
           centerMode={false}
-          draggable
+          draggable={false}
           infinite
           itemClass=""
           keyBoardControl
@@ -53,20 +53,18 @@ const ServiceList = () => {
           arrows={false}
           sliderClass=""
           showDots={true}
-
           slidesToSlide={1}
-          swipeable
-          className='h-full w-full py-16 bg-blue'
+          className='h-full w-full bg-blue py-8 '
 
         >
-          {serviceData.map((data) => (
-            <div className="flex gap-12 flex-col items-center lg:flex-row">
-              <div className="leftContent gap-4 flex flex-col basis-0 lg:basis-1/2">
+          {serviceData.map((data, index) => (
+            <div key={index} className="flex flex-col bg-white  h-full shadow-md border-2 md:flex-row">
+              <div className="leftContent gap-4 h-fit flex flex-col basis-3/5 p-5 md:p-10 ">
                 <h1 className='font-bold text-4xl'>{data.title}</h1>
-                <p className='text-justify text-md lg:text-lg'>{data.description}</p>
+                <p className='text-justify italic text-md md:text-md'>{data.description}</p>
               </div>
-              <div className="m-auto order-first lg:order-last">
-                <Image src={data.picture} width={500} height={500} alt='' className='W-full h-full' />
+              <div className="w-full h-full order-first basis-2/5 md:order-last ">
+                <Image src={data.picture} width={500} height={500} alt='' className='object-cover w-full h-full' />
               </div>
             </div>
 
