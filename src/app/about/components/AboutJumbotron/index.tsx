@@ -15,7 +15,7 @@ const AboutJumbotron = () => {
 
   const rightContent = (
 
-    <Image src={'https://res.cloudinary.com/dv9bbdl6i/image/upload/v1715609979/jumbotron-about_ddrvvn.jpg'} width={500} height={500} alt='' className='w-full h-full object-cover ' loading="eager" />
+    <Image src={'https://res.cloudinary.com/dv9bbdl6i/image/upload/c_crop,w_1920,h_1280/v1715609979/jumbotron-about_ddrvvn.jpg'} width={500} height={500} alt='' className='w-full h-full object-cover ' loading="eager" />
 
   )
   return (
