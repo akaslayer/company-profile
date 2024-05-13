@@ -24,9 +24,7 @@ export default function RootLayout({
         <body className={inter.className}>
           <SideBar />
           <NavBar />
-
           {children}
-
           <Footer />
         </body>
       </StateProvider>
