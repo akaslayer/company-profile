@@ -121,7 +121,7 @@ export const PricingData = [
     name: 'Extended Plan',
     description:
       'We will do our best to meet all of your requierment and needs, don`t hesitate to order',
-    pricing: 49,
+    pricing: 98,
     cover: [
       {
         name: '24/7 monitoring system',

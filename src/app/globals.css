@@ -16,6 +16,20 @@
   clip-path: polygon(0 78%, 100% 61%, 100% 100%, 0% 100%);
 }
 
+@keyframes moveLeft {
+  0%,
+  100% {
+    transform: translateX(0) translateY(-25%);
+  }
+  50% {
+    transform: translateX(-25%) translateY(-25%);
+  }
+}
+
+.move-left-animation {
+  animation: moveLeft 4s ease-in-out infinite;
+}
+
 .cardAnimation:hover {
   transform: rotateY(360deg);
   transition: 2s all ease-in;
@@ -93,15 +107,4 @@
 body {
   padding: 0;
   margin: 0;
-}
-
-@layer utilities {
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
 }

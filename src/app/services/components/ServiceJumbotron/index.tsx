@@ -4,7 +4,7 @@ import React from 'react'
 
 const ServiceJumbotron = () => {
   const leftContent = (
-    <div className="flex h-full p-12  bg-blue-700 relative lg:p-40" >
+    <div className="flex h-full p-12  bg-blue-700 relative md:p-40" >
       <span className='shape3 p-20 bg-black absolute right-0 bottom-0  h-full rotate-180 opacity-35 z-0 '></span>
       <span className='shape3 p-20 bg-black absolute left-0 bottom-0 opacity-35 z-0 hidden md:block '></span>
       <div className="relative justify-center w-full h-full flex flex-col gap-5 text-white font-DM-Sans" >

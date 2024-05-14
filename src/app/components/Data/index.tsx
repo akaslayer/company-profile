@@ -44,7 +44,7 @@ const Data: React.FC = () => {
                   decimals={1}
                   decimal="," start={0} duration={5} />
               )}
-              {'k+'}
+              k+
             </div>
             <p className='text-white text-xl'>of customers worldwide</p>
           </div>
@@ -54,7 +54,7 @@ const Data: React.FC = () => {
                 <CountUp end={14} separator=""
                   start={0} duration={5} />
               )}
-              {'+'}
+              +
             </div>
             <p className='text-white text-xl'>Countries with active
               client base</p>
@@ -65,14 +65,13 @@ const Data: React.FC = () => {
                 <CountUp end={4.9} separator=""
                   decimals={1}
                   decimal="," start={0} duration={5} />)}
-              {'/5'}
+              /5
             </div>
 
             <p className='text-white text-xl'>Customer
               rating</p>
           </div>
         </div>
-        {/* <span className='absolute w-full h-full bg-gradient-to-r from-indigo-600 via-purple-500 to-blue-800 top-0 opacity-90 rounded-md'></span> */}
       </div>
     </div>
   )

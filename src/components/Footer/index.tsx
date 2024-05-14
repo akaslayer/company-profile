@@ -33,8 +33,6 @@ const Footer = () => {
             <FaFacebookF className='hover:text-blue-500' />
           </div>
         </div>
-
-
         <div className="item flex flex-col gap-4 p-4 ">
           <div className="relative">
             <h2 className='text-2xl font-bold'>Official info</h2>
@@ -53,8 +51,8 @@ const Footer = () => {
           </div>
           <div className='flex flex-col gap-2'>
             <h2 className="font-bold text-lg flex flex-col gap-0">Open Hours :</h2>
-            <h5>Mon – Sat: 8 am – 5 pm</h5>
-            <h5> Sunday: CLOSED</h5>
+            <h3>Mon – Sat: 8 am – 5 pm</h3>
+            <h3> Sunday: CLOSED</h3>
           </div>
 
         </div>

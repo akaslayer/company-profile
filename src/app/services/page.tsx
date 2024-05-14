@@ -4,6 +4,7 @@ import React from 'react'
 import ServiceJumbotron from './components/ServiceJumbotron'
 import ServiceList from './components/ServiceList'
 import Pricing from '../about/components/Pricing'
+import Portofolio from './components/Portofolio'
 
 const service = () => {
 
@@ -11,6 +12,7 @@ const service = () => {
     <>
       <ServiceJumbotron />
       <ServiceList />
+      <Portofolio />
       <Pricing />
     </>
   )

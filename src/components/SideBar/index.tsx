@@ -8,11 +8,9 @@ import x from '../../../public/x-solid.svg';
 
 const SideBar = () => {
   const { openSideBar, setStateSideBar } = useStateValue()
-
   function handleOpenSideBar() {
     setStateSideBar(prevState => !prevState)
   }
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768 && openSideBar) {

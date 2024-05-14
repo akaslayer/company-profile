@@ -16,7 +16,7 @@ const ServiceList = () => {
           autoPlay={true}
           shouldResetAutoplay={false}
           centerMode={false}
-          draggable={false}
+          draggable={true}
           infinite
           itemClass=""
           keyBoardControl
@@ -58,13 +58,13 @@ const ServiceList = () => {
 
         >
           {serviceData.map((data, index) => (
-            <div key={index} className="flex flex-col bg-white  h-full shadow-md border-2 md:flex-row">
-              <div className="leftContent gap-4 h-fit flex flex-col basis-3/5 p-5 md:p-10 ">
+            <div key={index} className="flex flex-col bg-white rounded-md   shadow-md border-2 h-full md:flex-row">
+              <div className="leftContent gap-4 h-fit flex flex-col basis-3/5 p-5 md:basis-2/5 md:p-10 ">
                 <h1 className='font-bold text-4xl'>{data.title}</h1>
                 <p className='text-justify italic text-md md:text-md'>{data.description}</p>
               </div>
-              <div className="w-full h-full order-first basis-2/5 md:order-last ">
-                <Image src={data.picture} width={500} height={500} alt='' className='object-cover w-full h-full' />
+              <div className="w-full h-[60vh] order-first basis-2/5 md:basis-3/5 md:order-last">
+                <Image src={data.picture} width={500} height={500} alt='' className='object-cover w-full h-[40vh] md:h-full' />
               </div>
             </div>
 
