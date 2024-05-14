@@ -53,8 +53,8 @@ const Portofolio = () => {
 
           className="swiper_container"
         >
-          {portofolioData.map((data) => (
-            <SwiperSlide >
+          {portofolioData.map((data, index) => (
+            <SwiperSlide key={index} >
               <div className="w-full h-full relative group">
                 <Image src={data.picture} width={500} height={500} alt="slide_image" />
                 <div className='absolute text-center h-full w-full bottom-0 items-center justify-center flex flex-col p-3 z-20'>
