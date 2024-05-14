@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay'
 import { EffectCoverflow, Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import portofolioData from '@/utils/portofolioData';
 
 
 
@@ -38,7 +39,7 @@ const Portofolio = () => {
           }}
           spaceBetween={50}
           coverflowEffect={{
-            rotate: 20,
+            rotate: 0,
             stretch: 0,
             depth: 100,
             modifier: 2.5,
@@ -49,69 +50,22 @@ const Portofolio = () => {
             delay: 3000,
             disableOnInteraction: false,
           }}
-          loop={true}
+
           className="swiper_container"
         >
-          <SwiperSlide >
-            <div className="w-full h-full relative group">
-              <Image src={'/work1.jpg'} width={500} height={500} alt="slide_image" />
-              <div className='absolute text-center h-full w-full bottom-0 items-center justify-center flex flex-col p-3 z-20'>
-                <h2 className='text-white font-bold hidden group-hover:block'>One Touch</h2>
-                <p className='text-white font-semibo hidden group-hover:block'>AI to take charge of your home equipment with ease</p>
+          {portofolioData.map((data) => (
+            <SwiperSlide >
+              <div className="w-full h-full relative group">
+                <Image src={data.picture} width={500} height={500} alt="slide_image" />
+                <div className='absolute text-center h-full w-full bottom-0 items-center justify-center flex flex-col p-3 z-20'>
+                  <h2 className='text-white font-bold hidden group-hover:block'>{data.title}</h2>
+                  <p className='text-white font-semibo hidden group-hover:block'>{data.description}</p>
+                </div>
+                <span className='absolute bottom-0 w-full h-full opacity-60 z-10 group-hover:bg-black'></span>
               </div>
-              <span className='absolute bottom-0 w-full h-full opacity-60 z-10 group-hover:bg-black'></span>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-full h-full relative group">
-              <Image src={'/work2.png'} width={500} height={500} alt="slide_image" />
-              <div className='absolute text-center h-full w-full bottom-0 items-center justify-center flex flex-col p-3 z-20'>
-                <h2 className='text-white font-bold hidden group-hover:block'>One Touch</h2>
-                <p className='text-white font-semibo hidden group-hover:block'>AI to take charge of your home equipment with ease</p>
-              </div>
-              <span className='absolute bottom-0 w-full h-full opacity-60 z-10 group-hover:bg-black'></span>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-full h-full relative group">
-              <Image src={'/work3.png'} width={500} height={500} alt="slide_image" />
-              <div className='absolute text-center h-full w-full bottom-0 items-center justify-center flex flex-col p-3 z-20'>
-                <h2 className='text-white font-bold hidden group-hover:block'>One Touch</h2>
-                <p className='text-white font-semibo hidden group-hover:block'>AI to take charge of your home equipment with ease</p>
-              </div>
-              <span className='absolute bottom-0 w-full h-full opacity-60 z-10 group-hover:bg-black'></span>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-full h-full relative group">
-              <Image src={'/work4.jpg'} width={500} height={500} alt="slide_image" />
-              <div className='absolute text-center h-full w-full bottom-0 items-center justify-center flex flex-col p-3 z-20'>
-                <h2 className='text-white font-bold hidden group-hover:block'>One Touch</h2>
-                <p className='text-white font-semibo hidden group-hover:block'>AI to take charge of your home equipment with ease</p>
-              </div>
-              <span className='absolute bottom-0 w-full h-full opacity-60 z-10 group-hover:bg-black'></span>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-full h-full relative group">
-              <Image src={'/work5.jpg'} width={500} height={500} alt="slide_image" />
-              <div className='absolute text-center h-full w-full bottom-0 items-center justify-center flex flex-col p-3 z-20'>
-                <h2 className='text-white font-bold hidden group-hover:block'>One Touch</h2>
-                <p className='text-white font-semibo hidden group-hover:block'>AI to take charge of your home equipment with ease</p>
-              </div>
-              <span className='absolute bottom-0 w-full h-full opacity-60 z-10 group-hover:bg-black'></span>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-full h-full relative group">
-              <Image src={'/chatGPT.jpg'} width={500} height={500} alt="slide_image" />
-              <div className='absolute text-center h-full w-full bottom-0 items-center justify-center flex flex-col p-3 z-20'>
-                <h2 className='text-white font-bold hidden group-hover:block'>One Touch</h2>
-                <p className='text-white font-semibo hidden group-hover:block'>AI to take charge of your home equipment with ease</p>
-              </div>
-              <span className='absolute bottom-0 w-full h-full opacity-60 z-10 group-hover:bg-black'></span>
-            </div>
-          </SwiperSlide>
+            </SwiperSlide>
+
+          ))}
           <div className="slider-controler">
             <div className="swiper-pagination"></div>
           </div>
