@@ -18,35 +18,35 @@ const Culture = () => {
           <div className="culture-item flex items-center gap-5">
             <FaBrain className='size-8 text-blue-700' />
             <div className="flex flex-col">
-              <h5 className='font-bold text-xl'>Innovation</h5>
+              <h4 className='font-bold text-xl'>Innovation</h4>
               <p className='font-normal text-md'>We love new ideas and finding smart solutions to challenges.</p>
             </div>
           </div>
           <div className="culture-item flex items-center gap-5">
             <FaTeamspeak className='size-8 text-blue-700' />
             <div className="flex flex-col">
-              <h5 className='font-bold text-xl '>Teamwork</h5>
+              <h4 className='font-bold text-xl '>Teamwork</h4>
               <p className='font-normal text-md'>We work together, support each other, and achieve great things as a team.</p>
             </div>
           </div>
           <div className="culture-item flex items-center gap-5">
             <GiFlagObjective className='size-8 text-blue-700' />
             <div className="flex flex-col">
-              <h5 className='font-bold text-xl'>Excellence</h5>
+              <h4 className='font-bold text-xl'>Excellence</h4>
               <p className='font-normal text-md'>We&apos;re all about quality. We aim high and deliver our best every time.</p>
             </div>
           </div>
           <div className="culture-item flex items-center gap-5">
             <GrIntegration className='size-8 text-blue-700' />
             <div className="flex flex-col">
-              <h5 className='font-bold text-xl '>Integrity</h5>
+              <h4 className='font-bold text-xl '>Integrity</h4>
               <p className='font-normal text-md'>We do things right, with honesty and fairness in everything we do.</p>
             </div>
           </div>
           <div className="culture-item flex items-center gap-5">
             <FiCloudLightning className='size-8 text-blue-700' />
             <div className="flex flex-col">
-              <h5 className='font-bold text-xl '>Empowerment</h5>
+              <h4 className='font-bold text-xl '>Empowerment</h4>
               <p className='font-normal text-md'>We believe in you. We&apos;ll help you grow and succeed in your career.</p>
             </div>
           </div>

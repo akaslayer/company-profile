@@ -35,7 +35,7 @@ const Data: React.FC = () => {
             {startCount && (
               <CountUp end={2018} start={0} duration={5} className='text-white text-6xl font-bold' />
             )}
-            <p className='text-white text-xl'>Year of Establishment</p>
+            <p className='text-white text-xl font-bold'>Year of Establishment</p>
           </div>
           <div className="item p-6 bg-blue-500 rounded-md">
             <div className="text-white text-6xl font-bold">
@@ -46,7 +46,7 @@ const Data: React.FC = () => {
               )}
               k+
             </div>
-            <p className='text-white text-xl'>of customers worldwide</p>
+            <p className='text-white text-xl font-bold'>of customers worldwide</p>
           </div>
           <div className="item p-6 bg-blue-500 rounded-md">
             <div className="text-white text-6xl font-bold">
@@ -56,7 +56,7 @@ const Data: React.FC = () => {
               )}
               +
             </div>
-            <p className='text-white text-xl'>Countries with active
+            <p className='text-white text-xl font-bold'>Countries with active
               client base</p>
           </div>
           <div className="item p-6 bg-blue-500 rounded-md">
@@ -68,7 +68,7 @@ const Data: React.FC = () => {
               /5
             </div>
 
-            <p className='text-white text-xl'>Customer
+            <p className='text-white text-xl font-bold'>Customer
               rating</p>
           </div>
         </div>

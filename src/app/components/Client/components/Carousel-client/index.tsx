@@ -11,7 +11,7 @@ const Carousel2: React.FC<CarouselProps> = ({ icon, name }) => {
   return (
     <div className={iconDesign}>
       <span className='z-20'>{icon}</span>
-      <h2 className='z-20'>{name}</h2>
+      <h1 className='z-20'>{name}</h1>
       <span className="w-[100%] h-[100%] bottom-0 left-0  bg-blue-600 absolute  -translate-x-full ease-out duration-500 transition-all translate-y-full  ml-9 group-hover:ml-0   group-hover:translate-y-0 group-hover:translate-x-0"></span>
       <span className=" w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white"></span>
     </div >

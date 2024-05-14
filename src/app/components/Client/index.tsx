@@ -35,7 +35,7 @@ const Client = () => {
           ))}
         </div>
         <div className="client-list gap-8 py-8 items-center flex-col flex z-30 overflow-x-hidden md:mt-40 md:flex-row">
-          <h5 className='font-bold text-lg font-DM-Sans w-full text-left md:basis-1/4'>Join over +15.000 happy clients!</h5>
+          <h2 className='font-bold text-lg font-DM-Sans w-full text-left md:basis-1/4'>Join over +15.000 happy clients!</h2>
           <Marquee
             direction='right'
             speed={100}

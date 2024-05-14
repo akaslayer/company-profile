@@ -17,7 +17,7 @@ const TeamCard: React.FC<TeamProps> = ({ name, position, picture, description })
       <span className="absolute w-full h-full z-10 ease-in duration-200 opacity-60 bg-blue-600 group-hover:-translate-y-full p-4 text-center text-white font-bold"></span>
       <div className="desc absolute bottom-0 text-center w-full z-30 p-7 flex flex-col gap-0">
         <h3 className='font-bold text-xl text-white group-hover:text-black'>{name}</h3>
-        <h5 className='font-bold text-lg text-blue-400 group-hover:text-blue-800'>{position}</h5>
+        <h4 className='font-bold text-lg text-blue-400 group-hover:text-blue-800'>{position}</h4>
       </div>
       <div className="absolute w-full h-full py-14 px-8 text-white z-30 ease-in duration-200 group-hover:-translate-y-full  text-center flex flex-col gap-5  items-center">
         <p className='font-bold'>{description}</p>
