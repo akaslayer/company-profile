@@ -3,8 +3,11 @@ import TeamCard from '@/components/TeamCard'
 import { teamData } from '@/utils/DummyData'
 import { useEffect, useState } from 'react'
 import { FaWind } from 'react-icons/fa'
-import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css'
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/autoplay'
+import { EffectCoverflow, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Teams = () => {
   const [showCarousel, setShowCarousel] = useState<boolean>(true);
@@ -18,7 +21,7 @@ const Teams = () => {
   }, [showCarousel])
   return (
     <>
-      <div className="bg-slate-200 w-full py-10 px-20 flex flex-col gap-2 items-center font-DM-Sans md:py-20">
+      <div className="bg-slate-200 w-full py-10 px-10 flex flex-col gap-2 items-center font-DM-Sans md:py-20">
         <div className="title flex gap-4 items-center text-center justify-center text-2xl text-blue-800 font-bold">
           <FaWind className='rotate-180' />
           <h1>Team Members</h1>
@@ -27,57 +30,38 @@ const Teams = () => {
         <h2 className='text-center text-4xl font-bold mb-8 '>Passionate Personalities, <span className='text-blue-600'>Versatile</span> Brains</h2>
         <div className="grid items-center grid-cols-1 justify-center gap-8 md:grid-cols-4 w-full">
           {!showCarousel ? (
-            <Carousel
-              autoPlaySpeed={5000}
-              autoPlay={true}
-              shouldResetAutoplay={false}
-              centerMode={false}
-              dotListClass=""
-              draggable
-              infinite
-              keyBoardControl
-              minimumTouchDrag={80}
-              responsive={{
-                desktop: {
-                  breakpoint: {
-                    max: 3000,
-                    min: 1024
-                  },
-                  items: 4,
-                  partialVisibilityGutter: 20
-                },
-                mobile: {
-                  breakpoint: {
-                    max: 464,
-                    min: 0
-                  },
-                  items: 1,
-                  partialVisibilityGutter: 30
-                },
-                tablet: {
-                  breakpoint: {
-                    max: 1024,
-                    min: 464
-                  },
-                  items: 1,
-                  partialVisibilityGutter: 30
-                }
+            <Swiper
+              effect={'coverflow'}
+              grabCursor={true}
+              centeredSlides={true}
+              loop={true}
+              slidesPerView={1}
+              spaceBetween={50}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2.5,
               }}
-              arrows
-              sliderClass=""
-              slidesToSlide={1}
-              swipeable
+              pagination={{ el: '.swiper-pagination', clickable: true }}
+              modules={[Autoplay, EffectCoverflow]}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+
+              className="swiper_container w-full"
             >
               {teamData.map((data, index) => (
-                <TeamCard key={index} {...data} />
+                <SwiperSlide key={index}>
+                  <TeamCard  {...data} />
+                </SwiperSlide>
               ))}
-            </Carousel>
+            </Swiper>
           ) : (
-
             teamData.map((data, index) => (
               <TeamCard key={index} {...data} />
             ))
-
           )}
 
         </div>

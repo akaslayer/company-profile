@@ -16,7 +16,7 @@ const Portofolio = () => {
 
   return (
     <div className="py-20 px-10 w-full justify-center flex flex-col gap-2 bg-slate-300">
-      <h1 className='text-center text-6xl font-bold text-slate-600'>Our <span className='text-blue-600'>Works</span></h1>
+      <h1 className='text-center text-4xl font-bold text-slate-600 md:text-6xl'>Our <span className='text-blue-600'>Works</span></h1>
       <h2 className='text-slate-600 text-3xl font-semibold text-center'>See our awesome works</h2>
       <div className="justify-center p-5  items-center md:p-10">
         <Swiper

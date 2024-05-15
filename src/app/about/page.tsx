@@ -9,15 +9,14 @@ import AboutJumbotron from './components/AboutJumbotron'
 
 const about = () => {
   return (
-    <>
+    <div className="mt-[76px]">
       <AboutJumbotron />
       <Overview />
       <Culture />
       <Teams />
       <Milestone />
       <Pricing />
-
-    </>
+    </div>
   )
 }
 

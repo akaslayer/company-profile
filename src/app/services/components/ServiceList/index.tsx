@@ -8,7 +8,11 @@ import 'react-multi-carousel/lib/styles.css'
 const ServiceList = () => {
   return (
     <div className=' font-DM-Sans p-5 bg-slate-100 md:p-10'>
-      <h2 className='text-6xl font-bold text-center'>Our <span className='text-blue-700'>Services</span></h2>
+      <div className="flex gap-2 w-full justify-center">
+        <h2 className='text-5xl font-bold text-center'>Our</h2>
+        <h2 className='text-blue-700 text-5xl font-bold text-center'>Services</h2>
+      </div>
+
       <div className="flex md:px-40">
         <Carousel
           autoPlaySpeed={5000}

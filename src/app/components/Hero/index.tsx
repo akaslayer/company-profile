@@ -11,13 +11,9 @@ const slides = [
 
 const Hero = () => {
   return (
-    <div className='pt-20'>
-      <div className='overflow-hidden'>
-        <Carousel image={slides} />
-      </div>
+    <div className='overflow-hidden'>
+      <Carousel image={slides} />
     </div>
-
-
   )
 }
 

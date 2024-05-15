@@ -4,8 +4,12 @@ import Link from 'next/link';
 import React from 'react';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { IoIosStar } from "react-icons/io";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/autoplay'
+import 'swiper/css/navigation';
+import { EffectCoverflow, Autoplay, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 
 interface Testimonial {
@@ -64,80 +68,66 @@ const Testimonial: React.FC = () => {
         </Link>
       </div>
 
-      <Carousel
-        additionalTransfrom={0}
-        autoPlaySpeed={5000}
-        autoPlay={true}
-        shouldResetAutoplay={false}
-        centerMode={false}
-        dotListClass=""
-        draggable
-        infinite
-        itemClass=""
-        keyBoardControl
-        minimumTouchDrag={80}
-        responsive={{
-          desktop: {
-            breakpoint: {
-              max: 3000,
-              min: 1024
-            },
-            items: 1,
-            partialVisibilityGutter: 20
-          },
-          mobile: {
-            breakpoint: {
-              max: 464,
-              min: 0
-            },
-            items: 1,
-            partialVisibilityGutter: 30
-          },
-          tablet: {
-            breakpoint: {
-              max: 1024,
-              min: 464
-            },
-            items: 1,
-            partialVisibilityGutter: 30
-          }
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        slidesPerView={1}
+        spaceBetween={50}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.5,
         }}
-        arrows
-        sliderClass=""
-        slidesToSlide={1}
-        swipeable
-        customLeftArrow={
-          <button aria-label='buttonLeft' className="absolute bottom-2 right-28 rounded-full  bg-white p-2 border-2 border-black   cursor-pointer text-primary-400 hover:bg-blue-500 hover:text-white hover:border-white">
-            <BsArrowLeft className='size-6'
-            /></button>
+        pagination={{ el: '.swiper-pagination', clickable: true }}
+        modules={[Autoplay, EffectCoverflow, Navigation]}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        navigation={{
+          nextEl: '.swiper-next',
+          prevEl: '.swiper-prev',
+        }}
+        className="swiper_container w-full"
 
-        }
-        customRightArrow={
-          <button aria-label='buttonRight' className="absolute bottom-2 right-12 rounded-full  bg-white p-2 border-2 border-black   cursor-pointer text-primary-400 hover:bg-blue-500 hover:text-white hover:border-white">
-            <BsArrowRight className='size-6'
-            /></button>
-        }
       >
-        {testimonialData.map((testimonial: Testimonial) => (
-          <div key={testimonial.id} className="grid-item w-full flex flex-col relative gap-6 h-full bg-white p-10 rounded-md">
-            <div className="star flex text-yellow-400">
-              {[...Array(testimonial.rating)].map((_, index) => (
-                <IoIosStar key={index} size={32} />
-              ))}
-            </div>
-            <p className='text-xl text-justify font-normal w-full'>{testimonial.content}</p>
-            <div className="from flex items-center gap-5">
-              <div className="person-pic p-1 border-2 border-solid border-blue-500 rounded-full">
-                <Image src={testimonial.author.imageUrl} width={70} height={70} alt='contribute' />
+        {testimonialData.map((testimonial: Testimonial, index) => (
+          <SwiperSlide key={index}>
+            <div className="grid-item w-full flex flex-col relative gap-6 h-full bg-white p-10 rounded-md">
+              <div className="star flex text-yellow-400">
+                {[...Array(testimonial.rating)].map((_, index) => (
+                  <IoIosStar key={index} size={32} />
+                ))}
               </div>
-              <div className="person-desc">
-                <h1 className='font-bold text-2xl'>{testimonial.author.name}</h1>
-                <h2 className='text-md font-semibold text-blue-800'>{testimonial.author.role}</h2>
+              <p className='text-xl text-justify font-normal w-full'>{testimonial.content}</p>
+              <div className="from flex items-center gap-5">
+                <div className="person-pic p-1 border-2 border-solid border-blue-500 rounded-full">
+                  <Image src={testimonial.author.imageUrl} width={70} height={70} alt='contribute' />
+                </div>
+                <div className="person-desc">
+                  <h1 className='font-bold text-2xl'>{testimonial.author.name}</h1>
+                  <h2 className='text-md font-semibold text-blue-800'>{testimonial.author.role}</h2>
+                </div>
               </div>
             </div>
-          </div>
+            <div className="slider-controler">
+
+              <button aria-label='buttonLeft' className="swiper-prev absolute bottom-2 right-28 rounded-full z-20  bg-white p-2 border-2 border-black   cursor-pointer text-primary-400 hover:bg-blue-500 hover:text-white hover:border-white">
+                <BsArrowLeft className='size-6'
+                /></button>
+
+
+              <button aria-label='buttonRight' className="swiper-next absolute bottom-2 right-12 rounded-full z-20  bg-white p-2 border-2 border-black   cursor-pointer text-primary-400 hover:bg-blue-500 hover:text-white hover:border-white">
+                <BsArrowRight className='size-6'
+                /></button>
+            </div>
+          </SwiperSlide>
         ))}
-      </Carousel>
+
+      </Swiper>
     </div>
   )
 }

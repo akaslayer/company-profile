@@ -10,16 +10,15 @@ import Testimonial from "./components/Testimonial";
 
 export default function Home() {
   return (
-    <>
+    <div className="mt-[76px]">
       <Hero />
       <Client />
       <Overview />
-
       <Services />
       <Teams />
       <Data />
       <Testimonial />
 
-    </>
+    </div>
   );
 }

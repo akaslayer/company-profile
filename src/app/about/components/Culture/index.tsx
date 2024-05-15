@@ -6,7 +6,7 @@ import { GrIntegration } from 'react-icons/gr'
 
 const Culture = () => {
   return (
-    <div className='grid py-20 px-5 gap-8 bg-slate-300 md:grid-cols-2 md:h-[90vh]'>
+    <div className='grid py-20 px-5 gap-8 bg-slate-300 md:grid-cols-2 h-fit'>
       <div className="flex flex-col gap-8 md:px-20">
         <div className="relative">
           <span className="absolute left-0 right-0 top-0 h-1 w-1/4 md:w-1/6 bg-blue-500"></span>
@@ -52,7 +52,7 @@ const Culture = () => {
           </div>
         </div>
       </div>
-      <div className=" no-scrollbar grid grid-cols-2 grid-rows-2 rounded-lg gap-5 py-5 font-DM-Sans md:px-10  ">
+      <div className=" no-scrollbar grid grid-cols-2 grid-rows-2 rounded-lg gap-5  font-DM-Sans md:px-10  ">
         <Image src={'/RPA-pic.jpg'} width={500} height={500} className='h-full rounded-lg object-cover row-span-2' alt='' />
         <Image src={'/Chatbot-pic.jpg'} width={500} height={500} className='h-full rounded-lg object-cover object-left-top' alt='' />
         <Image src={'/OCR-pic.jpg'} width={500} height={500} className='h-full rounded-lg object-cover object-left-top' alt='' />
