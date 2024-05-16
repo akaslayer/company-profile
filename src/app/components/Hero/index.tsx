@@ -5,7 +5,7 @@ import Carousel from './components/Caorusel'
 
 
 const slides = [
-  "https://res.cloudinary.com/dv9bbdl6i/image/upload/v1715571573/slide3_jdcsie.jpg",
+  "https://res.cloudinary.com/dv9bbdl6i/image/upload/v1715860687/krakenimages-376KN_ISplE-unsplash_cqf1ig.jpg",
   "https://res.cloudinary.com/dv9bbdl6i/image/upload/v1715578141/slide1_gv2sue.jpg"
 ]
 

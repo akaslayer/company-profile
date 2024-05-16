@@ -31,8 +31,8 @@ const Carousel: React.FC<{ image: string[] }> = ({ image }) => {
   return (
     <div className='relative transition-opacity duration-500 ease-in-out w-full ' style={{ opacity: isTransitioning ? 0 : 1 }}>
       <div className='flex' style={{ opacity: isTransitioning ? 0 : 1 }}>
-        <Image loading="eager" src={image[currentIndex]} alt='hero' width={500} height={500}
-          className='object-cover w-full object-top h-[80vw] md:h-[55vw] ' />
+        <Image loading="eager" src={image[currentIndex]} alt='hero' width={1920} height={1280}
+          className='object-cover w-full  h-[80vw] md:h-[55vw] ' />
       </div>
       <button aria-label="leftButton" name="chevronLeft" onClick={goToPrevSlide} className='left-4 absolute bottom-1/2 translate-y-1/2 p-2  border-2 text-white border-white rounded-full md:p-4 hover:bg-white hover:text-black z-10 '>
         <FaChevronLeft aria-label='left-button' className='flex w-full size-8  md:size-12' />

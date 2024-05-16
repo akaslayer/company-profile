@@ -26,6 +26,19 @@
   }
 }
 
+@keyframes moveVertical {
+  0%,
+  100% {
+    transform: translateY(-5%);
+  }
+  50% {
+    transform: translateY(5%);
+  }
+}
+
+.move-vertical-animation {
+  animation: moveVertical 6s ease-in-out infinite;
+}
 .move-left-animation {
   animation: moveLeft 4s ease-in-out infinite;
 }

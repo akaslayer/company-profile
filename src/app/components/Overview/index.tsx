@@ -10,11 +10,11 @@ const Overview = () => {
     <div className='py-28 bg-slate-100 px-5 md:px-60'>
       <div className="grid gap-20 items-center md:grid-cols-2">
         <div className="relative flex justify-end md:px-20">
-          <div className="h-[60vh] w-full relative z-20 ">
-            <Image src={profile} alt='' className='rounded-lg h-full object-cover' />
+          <div className="w-full relative z-20 ">
+            <Image src={profile} alt='' className='rounded-lg h-full object-cover' width={400} height={600} />
           </div>
-          <div className=' absolute top-0 right-0 h-60 w-60 z-0 -translate-y-1/4 move-left-animation'>
-            <Image src={dot} alt='' className='h-full w-full' />
+          <div className=' absolute top-0 right-0 z-0 -translate-y-1/4 move-left-animation'>
+            <Image src={dot} alt='' width={1200} height={1200} className='w-60  object-cover' />
           </div>
         </div>
 

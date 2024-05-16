@@ -42,15 +42,15 @@ const Client = () => {
             loop={0}
             className='flex gap-20 items-center'>
             <div className="flex gap-20 items-center">
-              <Image src='/BNI.png' alt='' width={500} height={500} className=' w-40' />
-              <Image src='/Mandiri.png' alt='' width={500} height={500} className=' w-40' />
-              <Image src='/kawanLama.png' alt='' width={500} height={500} className=' w-40' />
-              <Image src='/Google.png' alt='' width={500} height={500} className='w-24' />
-              <Image src='/Mandiri.png' alt='' width={500} height={500} className=' w-40' />
+              <Image src='/BNI.png' alt='' width={2560} height={742} className=' w-28' />
+              <Image src='/kawanLama.png' alt='' width={1828} height={466} className=' w-36' />
+              <Image src='/Google.png' alt='' width={2400} height={2456} className='w-16' />
+              <Image src='/Mandiri.png' alt='' width={2560} height={745} className=' w-24' />
               <Image src='/Apple.png' alt='' width={500} height={500} className='w-24' />
-              <Image src='/kawanLama.png' alt='' width={500} height={500} className=' w-40' />
-              <Image src='/Google.png' alt='' width={500} height={500} className='w-24' />
-              <Image src='/Mandiri.png' alt='' width={500} height={500} className=' w-40' />
+              <Image src='/BNI.png' alt='' width={2560} height={742} className=' w-28' />
+              <Image src='/kawanLama.png' alt='' width={1828} height={466} className=' w-36' />
+              <Image src='/Google.png' alt='' width={2400} height={2456} className='w-16' />
+              <Image src='/Mandiri.png' alt='' width={2560} height={745} className=' w-24' />
               <Image src='/Apple.png' alt='' width={500} height={500} className='w-24' />
             </div>
           </Marquee>
