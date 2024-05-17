@@ -4,11 +4,11 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 const AboutJumbotron = () => {
-  const [useSmallImage, setUseSmallImage] = useState(false)
+  const [useSmallImage, setUseSmallImage] = useState(true)
 
   useEffect(() => {
     const handleResize = () => {
-      setUseSmallImage(window.innerWidth <= 400)
+      setUseSmallImage(window.innerWidth <= 500)
     }
     window.addEventListener('resize', handleResize)
     handleResize()
