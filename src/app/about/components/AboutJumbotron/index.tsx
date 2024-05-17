@@ -8,7 +8,7 @@ const AboutJumbotron = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setUseSmallImage(window.innerWidth <= 500)
+      setUseSmallImage(window.innerWidth <= 400)
     }
     window.addEventListener('resize', handleResize)
     handleResize()
@@ -27,9 +27,9 @@ const AboutJumbotron = () => {
   const rightContent = (
     <div className="w-full h-full">
       {useSmallImage ? <Image
-        width={400}
-        height={225}
-        src={'https://res.cloudinary.com/dv9bbdl6i/image/upload/c_fill,w_400,h_225/v1715927723/jumbotron-about_iglyca.webp'}
+        width={360}
+        height={203}
+        src={'https://res.cloudinary.com/dv9bbdl6i/image/upload/c_fill,w_360,h_203/v1715927723/jumbotron-about_iglyca.webp'}
         layout="responsive"
         alt='aboutJumbotron'
         className="w-full h-full object-cover"
