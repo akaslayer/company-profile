@@ -10,7 +10,7 @@ const TeamMember = () => {
     <div className='flex flex-col p-5 gap-5 md:p-20'>
       <h1>Our leadership team</h1>
       <p>With over 100 years of combined experience, we&apos;ve got a well seasoned team at the helm</p>
-      <div className="grid grid-cols-1 gap-8">
+      <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
         {teamData.map((data, index) => (
           <TeamMemberCard key={index} {...data} />
         ))}
