@@ -13,11 +13,10 @@ const Overview = () => {
           <div className="w-full relative z-20 ">
             <Image src={profile} alt='' className='rounded-lg h-full object-cover' width={400} height={600} />
           </div>
-          <div className=' absolute top-0 right-0 z-0 -translate-y-1/4 move-left-animation'>
-            <Image src={dot} alt='' width={1200} height={1200} className='w-60  object-cover' />
+          <div className='absolute top-0 right-0 z-0 -translate-y-1/4 move-left-animation'>
+            <Image src={dot} alt='' width={400} height={400} className='w-60  object-cover' />
           </div>
         </div>
-
         <div className="description flex flex-col gap-5">
           <button className='p-3 bg-white w-fit rounded-full font-bold text-blue-600'>About our company ~</button>
           <h2 className='font-bold text-5xl'>Choose <span className='text-blue-600'>The Best</span> IT Service Company</h2>

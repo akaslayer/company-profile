@@ -34,23 +34,6 @@ const Overview = () => {
         <div className="h-[10vh]">
           <p>{data[0].content}</p>
         </div>
-
-        {/* <div className="flex  flex-col  font-DM-Sans">
-          <div className=" gap-8 grid lg:grid-cols-2 ">
-            <div className="cardAnimation relative flex flex-col gap-2 bg-white p-5 shadow-lg rounded-lg">
-              <h1 className='font-bold text-3xl text-blue-700'>Vision</h1>
-              <p className='text-justify text-md'>Reputable Nation-wide Integrated, Diversified IT and Digital Transformation Solution</p>
-              <BsEye className='absolute top-4 right-3 size-6 text-blue-800' />
-            </div>
-
-            <div className="cardAnimation relative flex flex-col gap-2 bg-white p-5 shadow-lg rounded-lg">
-              <h1 className='font-bold text-3xl text-blue-700'>Mission</h1>
-              <p className='text-justify text-md'>We provide a cutting-edge IT and Digital Transformation solution for spesialized industries and consistently add values to retain loyalty to our stakeholders.</p>
-              <GoGoal className='absolute  top-4 right-3 size-6 text-blue-800' />
-            </div>
-          </div>
-
-        </div> */}
       </div>
 
 
@@ -77,8 +60,6 @@ const Overview = () => {
           </div>
         </div>
       </div>
-
-
     </div >
   )
 }

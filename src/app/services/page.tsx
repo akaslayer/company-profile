@@ -9,12 +9,12 @@ import Portofolio from './components/Portofolio'
 const service = () => {
 
   return (
-    <>
+    <div className='mt-[76px]'>
       <ServiceJumbotron />
       <ServiceList />
       <Portofolio />
       <Pricing />
-    </>
+    </div>
   )
 }
 

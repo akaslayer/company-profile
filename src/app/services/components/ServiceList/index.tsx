@@ -9,7 +9,7 @@ import { MdOutlineDiscount, MdOutlineWifiCalling } from 'react-icons/md'
 const ServiceList = () => {
 
   const [serviceType, setServiceTabs] = useState<string>('Chatbot')
-  const data = serviceData.filter(service => service.title == serviceType)
+  const data = serviceData.find(service => service.title == serviceType)
   const handleServiceType = (data: string) => {
     setServiceTabs(data)
   }
@@ -38,11 +38,11 @@ const ServiceList = () => {
 
         <div className="col-span-2 gap-6 flex flex-col md:px-10">
           <div className="w-full">
-            <Image src={data[0].picture} width={500} height={500} alt='image' className='w-full object-cover' />
+            <Image src={data!.picture} width={500} height={500} alt='image' className='w-full object-cover' />
           </div>
           <div className="description flex flex-col gap-2">
-            <h1 className='text-3xl font-bold'>{data[0].title}</h1>
-            <p>{data[0].description}</p>
+            <h1 className='text-3xl font-bold'>{data!.title}</h1>
+            <p>{data!.description}</p>
           </div>
           <div className="flex flex-col gap-3 md:flex-row">
             <div className="card gap-8 bg-black  flex items-center p-5">
@@ -65,7 +65,7 @@ const ServiceList = () => {
 
           <div className="flex flex-col gap-8 md:flex-row">
             <div className="pic w-full h-full">
-              <Image src={'/slide2.jpg'} alt='' width={500} height={500} className='w-full h-full' />
+              <Image src={'/service-splash.jpg'} alt='' width={500} height={500} className='w-full h-full' />
             </div>
             <div className="flex flex-col gap-4 justify-center">
               <h2 className='text-2xl font-bold'>We serve the best work</h2>

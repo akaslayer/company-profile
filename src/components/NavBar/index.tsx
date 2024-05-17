@@ -24,7 +24,7 @@ const NavBar = () => {
             <li className='hover:text-blue-400'><Link href='/'>Home</Link></li>
             <li className='hover:text-blue-400'><Link href='/about'>About</Link></li>
             <li className='hover:text-blue-400'><Link href='/services'>Services</Link></li>
-            <li className='hover:text-blue-400'>Teams</li>
+            <li className='hover:text-blue-400'><Link href='/teams'>Teams</Link></li>
           </ul>
           <div className='hamburger h-fit cursor-pointer px-[3px] py-2  mr-5 z-40 hover:bg-white md:hidden' onClick={handleOpenSideBar}>
             <div className='w-[30px] h-[2px] my-[6px] bg-black'></div>
