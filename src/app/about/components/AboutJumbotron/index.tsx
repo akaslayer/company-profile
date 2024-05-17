@@ -13,7 +13,7 @@ const AboutJumbotron = () => {
     window.addEventListener('resize', handleResize)
     handleResize()
     return () => removeEventListener("resize", handleResize)
-  })
+  }, [])
   const leftContent = (
     <div className="flex h-full px-5 py-20  bg-blue-700 relative items-center justify-end align-bottom md:py-0 md:mt-0 md:px-20 ">
       <span className='shape3 p-20 bg-black absolute right-0 bottom-0 h-full rotate-180 opacity-35 z-0'></span>
