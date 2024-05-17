@@ -8,7 +8,7 @@ const AboutJumbotron = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setUseSmallImage(window.innerWidth <= 500)
+      setUseSmallImage(window.innerWidth <= 400)
     }
     window.addEventListener('resize', handleResize)
     handleResize()
