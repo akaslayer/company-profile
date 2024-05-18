@@ -24,14 +24,13 @@ const services = [
     name: "Data Management"
   },
 ]
-
 const Client = () => {
   return (
     <>
       <div className='flex flex-col gap-8 p-5 relative  md:gap-0 bg-slate-200 object-bottom md:px-20'>
-        <div className="service flex flex-col gap-12 z-30 w-full text-center md:p-20 top-0  md:-translate-y-1/2 md:left-0  md:flex-row md:absolute ">
+        <div className="service flex flex-col gap-5 z-30 w-full text-center md:p-20 top-0  md:-translate-y-1/2 md:left-0  md:flex-row md:absolute ">
           {services.map((service, index) => (
-            <Carousel2 key={index} {...service} />
+            <Carousel2 key={index}  {...service} />
           ))}
         </div>
         <div className="client-list gap-8 py-8 items-center flex-col flex z-30 overflow-x-hidden md:mt-40 md:flex-row">

@@ -20,7 +20,7 @@ const AboutJumbotron = () => {
       <span className='shape3 p-20 bg-black absolute left-0 bottom-0 opacity-35 z-0 hidden md:block'></span>
       <div className="relative justify-center w-full h-full flex flex-col gap-5 text-white font-DM-Sans">
         <h2 className='font-bold text-xl'>About us</h2>
-        <p className='text-3xl font-semibold md:text-5xl'>We will always welcome to serve you</p>
+        <p className='text-3xl font-semibold md:text-5xl'>Great things in business are never done by one person; they&apos;re done by a team of people</p>
       </div>
     </div>
   );

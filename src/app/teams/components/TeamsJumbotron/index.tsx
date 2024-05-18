@@ -10,7 +10,7 @@ const TeamsJumbotron = () => {
       <span className='shape3 p-20 bg-black absolute left-0 bottom-0 opacity-35 z-0 hidden md:block'></span>
       <div className="relative justify-center w-full h-full flex flex-col gap-5 text-white font-DM-Sans">
         <h2 className='font-bold text-xl'>Teams</h2>
-        <p className='text-3xl font-semibold md:text-5xl'>We will be waiting for you to be one of us!</p>
+        <p className='text-3xl font-semibold md:text-5xl'>Individually, we are one drop. Together, we are an ocean</p>
       </div>
     </div>
   )

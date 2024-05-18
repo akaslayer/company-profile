@@ -9,7 +9,7 @@ const ServiceJumbotron = () => {
       <span className='shape3 p-20 bg-black absolute left-0 bottom-0 opacity-35 z-0 hidden md:block '></span>
       <div className="relative justify-center w-full h-full flex flex-col gap-5 text-white font-DM-Sans" >
         <h2 className='font-bold text-xl'>Services</h2>
-        <p className='text-3xl font-semibold md:text-5xl'>Welcome! We provide the service.</p>
+        <p className='text-3xl font-semibold md:text-5xl'>Technology is best when it brings people together</p>
       </div>
     </div >
   )

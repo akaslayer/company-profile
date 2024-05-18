@@ -11,7 +11,9 @@ interface cardProps {
 const Cards: React.FC<cardProps> = ({ title, description, link, image }) => {
   return (
     <div className="flex flex-col h-fit  gap-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <Image src={image} width={500} height={500} alt="" className='w-full' />
+      <div className="h-64 w-full">
+        <Image src={image} width={500} height={500} alt="" className='w-full h-full object-cover' />
+      </div>
       <div className="desc flex flex-col px-4 max-h-full gap-2">
         <h3 className="mb-2 text-2xl font-bold tracking-tight h-14 text-gray-900 dark:text-white">{title}</h3>
         <p className="mb-3 font-normal text-justify   line-clamp-3  text-gray-700 dark:text-gray-400">{description}</p>

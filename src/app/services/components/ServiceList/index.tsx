@@ -1,5 +1,5 @@
 'use client'
-import { serviceData } from '@/utils/DummyData'
+import { serviceData } from '@/utils/ServicesData'
 import Image from 'next/image'
 import { useState } from 'react'
 import { FaCrown, FaMedal } from 'react-icons/fa'

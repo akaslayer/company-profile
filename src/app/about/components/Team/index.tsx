@@ -1,6 +1,5 @@
 'use client'
 import TeamCard from '@/components/TeamCard'
-import { teamData } from '@/utils/DummyData'
 import { useEffect, useState } from 'react'
 import { FaWind } from 'react-icons/fa'
 import 'swiper/css';
@@ -8,6 +7,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/autoplay'
 import { EffectCoverflow, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { TeamMemberData } from '@/utils/TeamMemberData';
 
 const Teams = () => {
   const [showCarousel, setShowCarousel] = useState<boolean>(true);
@@ -49,17 +49,16 @@ const Teams = () => {
                 delay: 3000,
                 disableOnInteraction: false,
               }}
-
               className="swiper_container w-full"
             >
-              {teamData.map((data, index) => (
+              {TeamMemberData.map((data, index) => (
                 <SwiperSlide key={index}>
                   <TeamCard  {...data} />
                 </SwiperSlide>
               ))}
             </Swiper>
           ) : (
-            teamData.map((data, index) => (
+            TeamMemberData.map((data, index) => (
               <TeamCard key={index} {...data} />
             ))
           )}

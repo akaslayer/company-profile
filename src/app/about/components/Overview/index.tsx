@@ -1,5 +1,5 @@
 'use client'
-import { aboutTabsContent } from '@/utils/DummyData';
+import { AboutTabsData } from '@/utils/AboutTabsData';
 import Image from 'next/image';
 import { useState } from 'react';
 import { FaWind } from 'react-icons/fa';
@@ -9,7 +9,7 @@ import { TbTrophy } from 'react-icons/tb';
 
 const Overview = () => {
   const [contentType, setContentType] = useState('Mission')
-  const data = aboutTabsContent.filter(data => data.title == contentType)
+  const data = AboutTabsData.filter(data => data.title == contentType)
   const handleContentType = (data: string) => {
     setContentType(data)
   }

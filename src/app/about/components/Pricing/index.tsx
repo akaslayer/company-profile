@@ -1,4 +1,4 @@
-import { PricingData } from '@/utils/DummyData'
+import { PricingData } from '@/utils/PricingData'
 import { FaCheck } from 'react-icons/fa'
 import { FaX } from 'react-icons/fa6'
 

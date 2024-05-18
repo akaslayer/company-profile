@@ -18,7 +18,6 @@ export default function Home() {
       <Teams />
       <Data />
       <Testimonial />
-
     </div>
   );
 }

@@ -1,5 +1,4 @@
 'use client'
-import { milestoneData } from '@/utils/DummyData';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -8,7 +7,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-fade'
 import { Autoplay, EffectCoverflow, EffectFade, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { MilestoneDummyData } from '@/utils/MilestoneData';
 import MilestoneData from './components/MilestoneData';
+
 
 const Milestone = () => {
   return (
@@ -42,7 +43,7 @@ const Milestone = () => {
         }}
         className="swiper_container w-full"
       >
-        {milestoneData.map((data, index) => (
+        {MilestoneDummyData.map((data, index) => (
           <SwiperSlide key={index}>
             <MilestoneData {...data} />
           </SwiperSlide>

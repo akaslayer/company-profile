@@ -10,6 +10,7 @@ import 'swiper/css/autoplay'
 import 'swiper/css/navigation';
 import { EffectCoverflow, Autoplay, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { TestimonialData } from '@/utils/TestimonialData';
 
 
 interface Testimonial {
@@ -24,38 +25,6 @@ interface Testimonial {
 }
 
 const Testimonial: React.FC = () => {
-  const testimonialData: Testimonial[] = [
-    {
-      id: 1,
-      rating: 5,
-      content: "This place gives me the best services that were not given by another company. I love this company so much, and I will do an RO for this company.",
-      author: {
-        name: 'Sachin Diwar',
-        role: 'Graphic Designer',
-        imageUrl: '/pic3.png'
-      }
-    },
-    {
-      id: 2,
-      rating: 4,
-      content: "The best IT consultant company, give a lot of discount and a good work presentation, i wanto to do a repeat order here, because this company do the best for me and i love it",
-      author: {
-        name: 'Suki Desu',
-        role: 'CEO',
-        imageUrl: '/pic2.png'
-      }
-    },
-    {
-      id: 3,
-      rating: 5,
-      content: "The best IT consultant company, give a lot of discount and a good work presentation, i wanto to do a repeat order here, because this company do the best for me and i love it",
-      author: {
-        name: 'Maria Zhao',
-        role: 'CEO',
-        imageUrl: '/pic1.png'
-      }
-    },
-  ];
   return (
     <div className='bg-grey p-10 grid  gap-10 justify-center md:grid-cols-2 bg-slate-200 items-center md:p-20'>
       <div className="grid-item flex flex-col gap-8 font-DM-Sans">
@@ -94,7 +63,7 @@ const Testimonial: React.FC = () => {
         className="swiper_container w-full"
 
       >
-        {testimonialData.map((testimonial: Testimonial, index) => (
+        {TestimonialData.map((testimonial: Testimonial, index) => (
           <SwiperSlide key={index}>
             <div className="grid-item w-full flex flex-col relative gap-6 h-full bg-white p-10 rounded-md">
               <div className="star flex text-yellow-400">
