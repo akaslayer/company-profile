@@ -37,7 +37,7 @@ const SideBar = () => {
     };
   }, [openSideBar, setStateSideBar]);
 
-  const buttonDesign = 'bg-transparant w-1/3 m-auto rounded-lg p-3 border-2 border-blue-200 hover:bg-blue-400 hover:text-white'
+  const buttonDesign = ' w-full h-full flex items-center justify-center rounded-lg border-2 border-blue-200 hover:bg-blue-400 hover:text-white transition-colors duration-300';
   return (
     <div className={`h-full w-full bg-white flex flex-col fixed  z-50  border-blue-300 border-t-2 transition-all  ease in duration-300 ${openSideBar ? 'top-0 ' : 'top-[-100%]'}`} >
       <Image src={x} alt="tanda x" className='w-5 absolute top-8 right-8' onClick={handleOpenSideBar} />
@@ -47,11 +47,11 @@ const SideBar = () => {
             <Image src={logo} alt="logo" className="w-28 " />
           </div>
         </div>
-        <ul className='flex flex-col font-DM-Sans text-xl gap-6 text-center font-semibold justify-center items-center' >
-          <li className={`${buttonDesign} link ${pathname === '/' ? 'bg-blue-500 text-white' : ''}`}><Link href={'/'} onClick={handleOpenSideBar}>Home</Link></li>
-          <li className={`${buttonDesign} link ${pathname === '/about' ? 'bg-blue-500 text-white' : ''}`}><Link href={'/about'} onClick={handleOpenSideBar}>About</Link></li>
-          <li className={`${buttonDesign} link ${pathname === '/services' ? 'bg-blue-500 text-white' : ''}`}><Link href={'/services'} onClick={handleOpenSideBar}> Services</Link></li>
-          <li className={`${buttonDesign} link ${pathname === '/teams' ? 'bg-blue-500 text-white' : ''}`}><Link href={'/teams'} onClick={handleOpenSideBar}>Teams</Link></li>
+        <ul className='flex flex-col font-DM-Sans text-xl  text-center font-semibold justify-center items-center gap-10' >
+          <li className="w-full max-w-60 h-16"><Link href={'/'} onClick={handleOpenSideBar} className={`${buttonDesign} link ${pathname === '/' ? 'bg-blue-500 text-white' : ''}`}>Home</Link></li>
+          <li className="w-full max-w-60 h-16"><Link href={'/about'} onClick={handleOpenSideBar} className={`${buttonDesign} link ${pathname === '/about' ? 'bg-blue-500 text-white' : ''}`}>About</Link></li>
+          <li className="w-full max-w-60 h-16"><Link href={'/services'} onClick={handleOpenSideBar} className={`${buttonDesign} link ${pathname === '/services' ? 'bg-blue-500 text-white' : ''}`}>Services</Link></li>
+          <li className="w-full max-w-60 h-16"><Link href={'/teams'} onClick={handleOpenSideBar} className={`${buttonDesign} link ${pathname === '/teams' ? 'bg-blue-500 text-white' : ''}`}>Teams</Link></li>
         </ul>
       </nav>
 

@@ -17,7 +17,7 @@ const TeamMemberCard: React.FC<NewTeamList> = ({ gender, name, city, state, coun
         </div>
         <div className="flex flex-col text-center p-2 ">
           <h1 className='text-base font-bold md:text-2xl'>{name.first + " " + name.last}</h1>
-          <h2 className=' text-base font-semibold h-9 md:text-xl md:h-auto'>{job}</h2>
+          <h2 className=' text-base font-semibold h-12 md:text-xl md:h-auto'>{job}</h2>
         </div>
       </div>
     </div >
