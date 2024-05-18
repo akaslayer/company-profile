@@ -44,12 +44,16 @@ const TeamMember = () => {
   }, [isInView, teamData])
 
 
+  const handleOpenModal = (id: number) => {
+    setIndex(id)
+    setModalState(prevState => !prevState)
+
+  }
+
   const closeModal = () => {
     setModalState(prevState => !prevState)
   }
-  useEffect(() => {
-    setModalState(prevState => !prevState)
-  }, [index])
+
   return (
     <div className='flex flex-col p-5 gap-10 md:p-20 font-DM-Sans' ref={ref}>
       <div className="flex flex-col gap-2">
@@ -65,7 +69,7 @@ const TeamMember = () => {
         viewport={{ once: true, amount: 1 }}>
 
         {teamData.map((data, index) => (
-          <div onClick={() => setIndex(index)} key={index} className='hover:scale-105' >
+          <div onClick={() => handleOpenModal(index)} key={index} className='hover:scale-105' >
             <motion.div key={index} className="item w-full" variants={item}>
               <TeamMemberCard  {...data} />
             </motion.div>
