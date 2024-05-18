@@ -21,7 +21,7 @@ const Overview = () => {
           <FaWind></FaWind>
         </div>
         <h1 className='font-bold text-3xl'>Choose The Best IT Service Company</h1>
-        <p className='text-justify'>An integrated information and technology system provider, dedicated to delivering highly effective solutions in the field of Information Systems. Our core business focuses on information technology services, digital transformation and IT infrastructure. Our company started with only 10 (ten) personnel, currently, after years of experience, we are supported by more than 1000 consultants and developers.`</p>
+        <p className='text-justify'>Founded by John Sanna in 2018, ITechno started with a dedicated team of 10. Today, we have grown to over 1000 consultants and developers, with more than 120 branches worldwide. Specializing in chatbot, RPA, OCR, and data management, we excel in providing highly effective IT solutions, digital transformation, and IT infrastructure services.</p>
         <div className="flex gap-8  relative  ">
           <div onClick={() => handleContentType('Mission')} className={`font-bold text-lg z-10 border-b-4  ${contentType == "Mission" ? 'border-blue-600' : "hover:border-blue-600"} `}>
             <h2>Our Mission</h2>

@@ -4,7 +4,7 @@ import { FaX } from 'react-icons/fa6'
 
 const Pricing = () => {
   return (
-    <div className='flex flex-col gap-5 py-20 px-5 bg-slate-200 font-DM-Sans md:p-20'>
+    <div className='flex flex-col gap-5 py-20 px-5 bg-slate-100 font-DM-Sans md:p-20'>
       <div className="title shadow-md font-DM-Sans bg-white py-2 px-6 text-blue-600 text-center font-bold text-lg m-auto rounded-full ">
         <h2>~Pricing~</h2>
       </div>

@@ -20,7 +20,7 @@ const Overview = () => {
         <div className="description flex flex-col gap-5">
           <button className='p-3 bg-white w-fit rounded-full font-bold text-blue-600'>About our company ~</button>
           <h2 className='font-bold text-5xl'>Choose <span className='text-blue-600'>The Best</span> IT Service Company</h2>
-          <p className='p-4 border-blue-600 border-l-4'>An integrated information and technology system provider, dedicated to delivering highly effective solutions in the field of Information Systems. Our core business focuses on information technology services, digital transformation and IT infrastructure. Our company started with only 10 (ten) personnel, currently, after years of experience, we are supported by more than 1000 consultants and developers.</p>
+          <p className='p-4 border-blue-600 border-l-4'>Founded by John Sanna in 2018, ITechno started with a dedicated team of 10. Today, we have grown to over 1000 consultants and developers, with more than 120 branches worldwide. Specializing in chatbot, RPA, OCR, and data management, we excel in providing highly effective IT solutions, digital transformation, and IT infrastructure services.</p>
           <hr />
           <div className="flex gap-8 items-center">
             <div className="icon flex gap-3 items-center">

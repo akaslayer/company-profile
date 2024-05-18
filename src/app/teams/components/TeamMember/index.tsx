@@ -53,7 +53,7 @@ const TeamMember = () => {
   return (
     <div className='flex flex-col p-5 gap-10 md:p-20 font-DM-Sans' ref={ref}>
       <div className="flex flex-col gap-2">
-        <h1 className='text-center text-5xl font-bold'>Our leadership team</h1>
+        <h1 className='text-center text-5xl font-bold'><span className='text-blue-600'>Our</span> Leadership Team</h1>
         <p className='text-center font-semibold text-gray-500 text-xl'>With over 100 years of combined experience, we&apos;ve got a well seasoned team at the helm</p>
       </div>
 
