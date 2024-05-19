@@ -1,11 +1,16 @@
-
-import Teams from "./about/components/Team";
+import { Metadata } from "next";
 import Client from "./components/Client";
 import Data from "./components/Data";
 import Hero from "./components/Hero";
 import Overview from "./components/Overview";
 import Services from "./components/Services";
-import Testimonial from "./components/Testimonial";
+import Culture from "./about/components/Culture";
+import Teams from "@/components/Team";
+import Testimonial from "@/components/Testimonial";
+
+export const metadata: Metadata = {
+  title: "Home",
+}
 
 
 export default function Home() {
@@ -14,6 +19,7 @@ export default function Home() {
       <Hero />
       <Client />
       <Overview />
+      <Culture />
       <Services />
       <Teams />
       <Data />

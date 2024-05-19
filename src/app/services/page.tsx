@@ -1,13 +1,13 @@
-import Jumbotron from '@/components/Jumbotron'
-import Image from 'next/image'
-import React from 'react'
 import ServiceJumbotron from './components/ServiceJumbotron'
 import ServiceList from './components/ServiceList'
-
+import Testimonial from '@/components/Testimonial'
+import { Metadata } from 'next'
 import Portofolio from './components/Portofolio'
 import Pricing from './components/Pricing'
-import Testimonial from '../components/Testimonial'
 
+export const metadata: Metadata = {
+  title: "Services",
+}
 const service = () => {
 
   return (

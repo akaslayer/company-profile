@@ -76,10 +76,6 @@ const TeamMember = () => {
           </div>
         ))}
       </motion.div>
-
-
-
-
       {modalState ? (
         <div className={`fixed bg-gray-800/50 z-30 inset-0 p-5  content-center md:p-64`}>
           <div className="relative bg-white content-center p-10 flex flex-col gap-4">

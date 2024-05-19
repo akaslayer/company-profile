@@ -69,7 +69,7 @@ const ServiceList = () => {
             </div>
             <div className="flex flex-col gap-4 justify-center">
               <h2 className='text-2xl font-bold'>We serve the best work</h2>
-              <p className='text-md text-gray-500'>By initiating your project with Fingent, you get a dedicated and skilled team backing you up round-the-clock. All our processes are the customer oriented, designed to reduce the cost of business operations.</p>
+              <p className='text-md text-gray-500'>At ITECHNO, we deliver exceptional service by providing a dedicated and skilled team available round-the-clock. Our customer-oriented processes are designed to enhance efficiency and reduce business operation costs.</p>
             </div>
           </div>
 

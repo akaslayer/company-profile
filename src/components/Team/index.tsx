@@ -1,5 +1,4 @@
 'use client'
-import TeamCard from '@/components/TeamCard'
 import { useEffect, useState } from 'react'
 import { FaWind } from 'react-icons/fa'
 import 'swiper/css';
@@ -8,6 +7,7 @@ import 'swiper/css/autoplay'
 import { EffectCoverflow, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { TeamMemberData } from '@/utils/TeamMemberData';
+import TeamCard from './_components/TeamCard';
 
 const Teams = () => {
   const [showCarousel, setShowCarousel] = useState<boolean>(true);
