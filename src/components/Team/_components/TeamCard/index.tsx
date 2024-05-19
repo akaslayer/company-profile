@@ -23,7 +23,7 @@ const TeamCard: React.FC<TeamProps> = ({ name, position, picture, description })
         <p className='font-bold'>{description}</p>
         <Link href='/teams' className="relative rounded-full py-2 px-2 overflow-hidden  bg-gradient-to-r from-cyan-500 to-blue-500 w-fit hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-400 text-white transition-all ease-out duration-300 md:px-10">
           <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white rounded-full opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-          <span className="relative text-sm font-semibold">Read more</span>
+          <span className="relative text-sm font-semibold">See Details</span>
         </Link>
       </div>
     </div >
