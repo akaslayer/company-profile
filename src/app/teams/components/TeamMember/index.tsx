@@ -35,101 +35,41 @@ const TeamMember = () => {
         className="grid grid-cols-2 gap-5 md:grid-cols-3"
 
       >
-        {!loading ? (
-          <>
-            {teamData.map((data, index) => (
-              <div onClick={() => handleOpenModal(index)} key={index} className='hover:scale-105' >
-                <TeamMemberCard  {...data} />
-              </div>
-            ))}
-          </>
-        ) : (
-          <>
-            <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
-              <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
-                <div className=' object-cover rounded-lg bg-slate-200 w-auto h-[200px] md:h-[400px]' />
-              </div>
-              <div className='flex flex-col text-center p-2 gap-2 '>
-                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200 md:h-10'></h1>
-                <h2 className=' text-base font-semibold h-5 md:text-xl bg-slate-200 md:h-10 '></h2>
-              </div>
-            </div>
-            <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
-              <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
-                <div className=' object-cover rounded-lg bg-slate-200 w-auto h-[200px] md:h-[400px]' />
-              </div>
-              <div className='flex flex-col text-center p-2 gap-2 '>
-                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200 md:h-10'></h1>
-                <h2 className=' text-base font-semibold h-5 md:text-xl bg-slate-200 md:h-10 '></h2>
-              </div>
-            </div>
-            <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
-              <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
-                <div className=' object-cover rounded-lg bg-slate-200 w-auto h-[200px] md:h-[400px]' />
-              </div>
-              <div className='flex flex-col text-center p-2 gap-2 '>
-                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200 md:h-10'></h1>
-                <h2 className=' text-base font-semibold h-5 md:text-xl bg-slate-200 md:h-10 '></h2>
-              </div>
-            </div>
-            <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
-              <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
-                <div className=' object-cover rounded-lg bg-slate-200 w-auto h-[200px] md:h-[400px]' />
-              </div>
-              <div className='flex flex-col text-center p-2 gap-2 '>
-                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200 md:h-10'></h1>
-                <h2 className=' text-base font-semibold h-5 md:text-xl bg-slate-200 md:h-10 '></h2>
-              </div>
-            </div>
-            <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
-              <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
-                <div className=' object-cover rounded-lg bg-slate-200 w-auto h-[200px] md:h-[400px]' />
-              </div>
-              <div className='flex flex-col text-center p-2 gap-2 '>
-                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200 md:h-10'></h1>
-                <h2 className=' text-base font-semibold h-5 md:text-xl bg-slate-200 md:h-10 '></h2>
-              </div>
-            </div>
-            <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
-              <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
-                <div className=' object-cover rounded-lg bg-slate-200 w-auto h-[200px] md:h-[400px]' />
-              </div>
-              <div className='flex flex-col text-center p-2 gap-2 '>
-                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200 md:h-10'></h1>
-                <h2 className=' text-base font-semibold h-5 md:text-xl bg-slate-200 md:h-10 '></h2>
-              </div>
-            </div>
 
 
+        {teamData.map((data, index) => (
+          <div onClick={() => handleOpenModal(index)} key={index} className='hover:scale-105' >
+            <TeamMemberCard  {...data} />
+          </div>
+        ))}
 
 
-          </>
-
-        )}
       </div>
-      {modalState ? (
-        <div className={`fixed bg-gray-800/50 z-30 inset-0 p-5  content-center md:p-64`}>
-          <div className="relative bg-white content-center p-10 flex flex-col gap-4">
-            <BiX className='absolute size-12 right-3 top-2' onClick={closeModal} />
-            <div className="">
-              <h1 className='text-3xl font-bold'>{data?.name.title + " " + data?.name.first + " " + data?.name.last}</h1>
-              <h2 className='text-md text-gray-500 font-semibold'>{data?.job}</h2>
-              <hr />
-            </div>
-            <p className=''>{data?.description}</p>
-            <div className="flex flex-col gap-2">
-              <div className="flex gap-4 items-center">
-                <FaPhone size={20} />
-                <h3 className='font-semibold'>{data?.phone}</h3>
+      {
+        modalState ? (
+          <div className={`fixed bg-gray-800/50 z-30 inset-0 p-5  content-center md:p-64`}>
+            <div className="relative bg-white content-center p-10 flex flex-col gap-4">
+              <BiX className='absolute size-12 right-3 top-2' onClick={closeModal} />
+              <div className="">
+                <h1 className='text-3xl font-bold'>{data?.name.title + " " + data?.name.first + " " + data?.name.last}</h1>
+                <h2 className='text-md text-gray-500 font-semibold'>{data?.job}</h2>
+                <hr />
               </div>
-              <div className="flex gap-4 items-center">
-                <MdEmail size={20} />
-                <h3 className='font-semibold'>{data?.email}</h3>
+              <p className=''>{data?.description}</p>
+              <div className="flex flex-col gap-2">
+                <div className="flex gap-4 items-center">
+                  <FaPhone size={20} />
+                  <h3 className='font-semibold'>{data?.phone}</h3>
+                </div>
+                <div className="flex gap-4 items-center">
+                  <MdEmail size={20} />
+                  <h3 className='font-semibold'>{data?.email}</h3>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ) : null}
+        ) : null
+      }
     </div >
   )
 }
