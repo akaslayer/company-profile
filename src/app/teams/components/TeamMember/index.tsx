@@ -36,10 +36,7 @@ const TeamMember = () => {
 
       <div
         className="grid grid-cols-2 gap-5 md:grid-cols-3"
-      // variants={container}
-      // animate={mainControls}
-      // initial="visible"
-      // viewport={{ once: true, amount: 1 }}
+
       >
         {!loading ? (
           <>
