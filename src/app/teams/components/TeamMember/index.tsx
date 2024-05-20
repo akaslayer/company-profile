@@ -5,43 +5,16 @@ import TeamMemberCard from './_components/TeamMemberCard'
 import { BiX } from 'react-icons/bi'
 import { FaPhone } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
-import { easeIn, motion, useAnimation, useInView } from "framer-motion";
 
 
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.2,
-      staggerChildren: 0.3,
-      ease: easeIn
-    }
-  }
-};
 
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1
-  }
-};
 
 const TeamMember = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
   const { teamData, loading } = useStateValue()
   const [modalState, setModalState] = useState<boolean>(false)
   const [index, setIndex] = useState<number>(0)
   const data = teamData[index]
-  const mainControls = useAnimation();
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start('visible')
-    }
-  }, [isInView, teamData])
+
 
 
   const handleOpenModal = (id: number) => {
@@ -55,25 +28,26 @@ const TeamMember = () => {
   }
 
   return (
-    <div className='flex flex-col p-5 gap-10 md:p-20 font-DM-Sans' ref={ref}>
+    <div className='flex flex-col p-5 gap-10 md:p-20 font-DM-Sans' >
       <div className="flex flex-col gap-2">
         <h1 className='text-center text-5xl font-bold'><span className='text-blue-600'>Our</span> Leadership Team</h1>
         <p className='text-center font-semibold text-gray-500 text-xl'>With over 100 years of combined experience, we&apos;ve got a well seasoned team at the helm</p>
       </div>
 
-      <motion.div
+      <div
         className="grid grid-cols-2 gap-5 md:grid-cols-3"
-        variants={container}
-        animate={mainControls}
-        initial="hidden"
-        viewport={{ once: true, amount: 1 }}>
+      // variants={container}
+      // animate={mainControls}
+      // initial="visible"
+      // viewport={{ once: true, amount: 1 }}
+      >
         {!loading ? (
           <>
             {teamData.map((data, index) => (
               <div onClick={() => handleOpenModal(index)} key={index} className='hover:scale-105' >
-                <motion.div key={index} className="item w-full" variants={item}>
-                  <TeamMemberCard  {...data} />
-                </motion.div>
+
+                <TeamMemberCard  {...data} />
+
               </div>
             ))}
           </>
@@ -136,7 +110,7 @@ const TeamMember = () => {
           </>
 
         )}
-      </motion.div>
+      </div>
       {modalState ? (
         <div className={`fixed bg-gray-800/50 z-30 inset-0 p-5  content-center md:p-64`}>
           <div className="relative bg-white content-center p-10 flex flex-col gap-4">

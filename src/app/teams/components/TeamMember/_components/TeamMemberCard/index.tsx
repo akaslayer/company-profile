@@ -1,12 +1,6 @@
-import { NewTeamList, TeamList } from '@/context/StateContext'
-import { count } from 'console'
+import { NewTeamList } from '@/context/StateContext'
 import Image from 'next/image'
-import React, { useState } from 'react'
-import { BiX } from 'react-icons/bi'
-import { BsMailbox } from 'react-icons/bs'
-import { FaMailchimp, FaPhone } from 'react-icons/fa'
-import { FaLetterboxd, FaLocationDot, FaLocationPin, FaLocationPinLock } from 'react-icons/fa6'
-import { MdEmail } from 'react-icons/md'
+import React from 'react'
 
 const TeamMemberCard: React.FC<NewTeamList> = ({ gender, name, city, state, country, postcode, email, phone, picture, dob, description, job }) => {
   return (
