@@ -15,14 +15,11 @@ const TeamMember = () => {
   const [index, setIndex] = useState<number>(0)
   const data = teamData[index]
 
-
-
   const handleOpenModal = (id: number) => {
     setIndex(id)
     setModalState(prevState => !prevState)
 
   }
-
   const closeModal = () => {
     setModalState(prevState => !prevState)
   }
@@ -42,9 +39,7 @@ const TeamMember = () => {
           <>
             {teamData.map((data, index) => (
               <div onClick={() => handleOpenModal(index)} key={index} className='hover:scale-105' >
-
                 <TeamMemberCard  {...data} />
-
               </div>
             ))}
           </>
@@ -52,58 +47,62 @@ const TeamMember = () => {
           <>
             <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
               <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
-                <div className=' w-full object-cover rounded-lg bg-slate-200 h-[200px] md:h-[400px]' />
+                <div className=' object-cover rounded-lg bg-slate-200 w-auto h-[200px] md:h-[400px]' />
               </div>
               <div className='flex flex-col text-center p-2 gap-2 '>
-                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200'></h1>
-                <h2 className=' text-base font-semibold h-5 md:text-xl md:h-auto bg-slate-200'></h2>
+                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200 md:h-10'></h1>
+                <h2 className=' text-base font-semibold h-5 md:text-xl bg-slate-200 md:h-10 '></h2>
               </div>
             </div>
             <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
               <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
-                <div className=' w-full object-cover rounded-lg bg-slate-200 h-[200px] md:h-[400px]' />
+                <div className=' object-cover rounded-lg bg-slate-200 w-auto h-[200px] md:h-[400px]' />
               </div>
               <div className='flex flex-col text-center p-2 gap-2 '>
-                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200'></h1>
-                <h2 className=' text-base font-semibold h-5 md:text-xl md:h-auto bg-slate-200'></h2>
+                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200 md:h-10'></h1>
+                <h2 className=' text-base font-semibold h-5 md:text-xl bg-slate-200 md:h-10 '></h2>
               </div>
             </div>
             <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
               <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
-                <div className=' w-full object-cover rounded-lg bg-slate-200 h-[200px] md:h-[400px]' />
+                <div className=' object-cover rounded-lg bg-slate-200 w-auto h-[200px] md:h-[400px]' />
               </div>
               <div className='flex flex-col text-center p-2 gap-2 '>
-                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200'></h1>
-                <h2 className=' text-base font-semibold h-5 md:text-xl md:h-auto bg-slate-200'></h2>
+                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200 md:h-10'></h1>
+                <h2 className=' text-base font-semibold h-5 md:text-xl bg-slate-200 md:h-10 '></h2>
               </div>
             </div>
             <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
               <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
-                <div className=' w-full object-cover rounded-lg bg-slate-200 h-[200px] md:h-[400px]' />
+                <div className=' object-cover rounded-lg bg-slate-200 w-auto h-[200px] md:h-[400px]' />
               </div>
               <div className='flex flex-col text-center p-2 gap-2 '>
-                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200'></h1>
-                <h2 className=' text-base font-semibold h-5 md:text-xl md:h-auto bg-slate-200'></h2>
+                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200 md:h-10'></h1>
+                <h2 className=' text-base font-semibold h-5 md:text-xl bg-slate-200 md:h-10 '></h2>
               </div>
             </div>
             <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
               <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
-                <div className=' w-full object-cover rounded-lg bg-slate-200 h-[200px] md:h-[400px]' />
+                <div className=' object-cover rounded-lg bg-slate-200 w-auto h-[200px] md:h-[400px]' />
               </div>
               <div className='flex flex-col text-center p-2 gap-2 '>
-                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200'></h1>
-                <h2 className=' text-base font-semibold h-5 md:text-xl md:h-auto bg-slate-200'></h2>
+                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200 md:h-10'></h1>
+                <h2 className=' text-base font-semibold h-5 md:text-xl bg-slate-200 md:h-10 '></h2>
               </div>
             </div>
             <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
               <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
-                <div className=' w-full object-cover rounded-lg bg-slate-200 h-[200px] md:h-[400px]' />
+                <div className=' object-cover rounded-lg bg-slate-200 w-auto h-[200px] md:h-[400px]' />
               </div>
               <div className='flex flex-col text-center p-2 gap-2 '>
-                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200'></h1>
-                <h2 className=' text-base font-semibold h-5 md:text-xl md:h-auto bg-slate-200'></h2>
+                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200 md:h-10'></h1>
+                <h2 className=' text-base font-semibold h-5 md:text-xl bg-slate-200 md:h-10 '></h2>
               </div>
             </div>
+
+
+
+
           </>
 
         )}

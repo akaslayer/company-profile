@@ -10,7 +10,7 @@ const sans = DM_Sans({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   variable: "--font-DM-Sans",
-  display: 'swap'
+
 })
 
 
