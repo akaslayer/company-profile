@@ -10,7 +10,7 @@ import { MdEmail } from 'react-icons/md'
 
 
 const TeamMember = () => {
-  const { teamData, loading } = useStateValue()
+  const { teamData } = useStateValue()
   const [modalState, setModalState] = useState<boolean>(false)
   const [index, setIndex] = useState<number>(0)
   const data = teamData[index]
