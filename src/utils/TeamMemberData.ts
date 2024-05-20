@@ -23,7 +23,7 @@ export const TeamExtensionData = [
   {
     description:
       'A dedicated customer support specialist committed to providing exceptional service. With a friendly demeanor and strong communication skills, they ensure customers needs are met with care.',
-    job: 'Customer Support Specialist',
+    job: 'Customer Support',
   },
   {
     description:
