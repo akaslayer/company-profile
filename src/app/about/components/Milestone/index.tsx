@@ -17,8 +17,7 @@ const Milestone = () => {
       <h1 className='font-bold text-4xl text-center'><span className='text-blue-700'>Our </span>Milestone</h1>
       <Swiper
         grabCursor={true}
-
-
+        loop={true}
         breakpoints={{
           320: {
             slidesPerView: 1,
