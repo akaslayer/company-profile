@@ -1,4 +1,5 @@
 'use client'
+import { useStateValue } from '@/context/StateContext'
 import { serviceData } from '@/utils/ServicesData'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -8,13 +9,13 @@ import { MdOutlineDiscount, MdOutlineWifiCalling } from 'react-icons/md'
 
 const ServiceList = () => {
 
-  const [serviceType, setServiceTabs] = useState<string>('Chatbot')
+  const { serviceType, setServiceTabs } = useStateValue()
   const data = serviceData.find(service => service.title == serviceType)
   const handleServiceType = (data: string) => {
     setServiceTabs(data)
   }
   return (
-    <div className="py-20 bg-slate-50 relative md:p-20 font-DM-Sans">
+    <div className="py-20 bg-slate-50 relative md:p-20 font-DM-Sans" id='Service'>
       <h1 className='text-center font-bold text-5xl pb-12'>Our <span className='text-blue-600'>Services</span></h1>
       <div className="grid grid-cols-1 p-5 gap-4  md:gap-5 md:p-0  md:grid-cols-3">
         <div className="left-0 top-28 flex flex-col justify-center order-last gap-5 h-fit md:sticky md:order-first">

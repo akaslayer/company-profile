@@ -46,6 +46,8 @@ interface ContextProps {
   setStateSideBar: Dispatch<SetStateAction<boolean>>
   teamData: NewTeamList[]
   loading: boolean,
+  serviceType: string,
+  setServiceTabs: (query: string) => void,
 }
 
 const defaultValue = {
@@ -53,6 +55,8 @@ const defaultValue = {
   setStateSideBar: () => { },
   teamData: [],
   loading: false,
+  serviceType: "chatbot",
+  setServiceTabs: () => { }
 }
 
 
@@ -62,6 +66,7 @@ const StateProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [openSideBar, setStateSideBar] = useState<boolean>(false)
   const { teamList, loading } = useUserData()
   const [teamData, setTeamData] = useState<NewTeamList[]>([])
+  const [serviceType, setServiceTabs] = useState<string>('Chatbot')
 
 
 
@@ -83,7 +88,7 @@ const StateProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
 
   return (
     <StateContext.Provider
-      value={{ openSideBar, setStateSideBar, teamData, loading }}>
+      value={{ openSideBar, setStateSideBar, teamData, loading, serviceType, setServiceTabs }}>
       {children}
     </StateContext.Provider>
   )

@@ -32,7 +32,7 @@ const item = {
 const TeamMember = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
-  const { teamData } = useStateValue()
+  const { teamData, loading } = useStateValue()
   const [modalState, setModalState] = useState<boolean>(false)
   const [index, setIndex] = useState<number>(0)
   const data = teamData[index]
@@ -67,14 +67,75 @@ const TeamMember = () => {
         animate={mainControls}
         initial="hidden"
         viewport={{ once: true, amount: 1 }}>
+        {!loading ? (
+          <>
+            {teamData.map((data, index) => (
+              <div onClick={() => handleOpenModal(index)} key={index} className='hover:scale-105' >
+                <motion.div key={index} className="item w-full" variants={item}>
+                  <TeamMemberCard  {...data} />
+                </motion.div>
+              </div>
+            ))}
+          </>
+        ) : (
+          <>
+            <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
+              <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
+                <div className=' w-full object-cover rounded-lg bg-slate-200 h-[200px] md:h-[400px]' />
+              </div>
+              <div className='flex flex-col text-center p-2 gap-2 '>
+                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200'></h1>
+                <h2 className=' text-base font-semibold h-5 md:text-xl md:h-auto bg-slate-200'></h2>
+              </div>
+            </div>
+            <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
+              <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
+                <div className=' w-full object-cover rounded-lg bg-slate-200 h-[200px] md:h-[400px]' />
+              </div>
+              <div className='flex flex-col text-center p-2 gap-2 '>
+                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200'></h1>
+                <h2 className=' text-base font-semibold h-5 md:text-xl md:h-auto bg-slate-200'></h2>
+              </div>
+            </div>
+            <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
+              <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
+                <div className=' w-full object-cover rounded-lg bg-slate-200 h-[200px] md:h-[400px]' />
+              </div>
+              <div className='flex flex-col text-center p-2 gap-2 '>
+                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200'></h1>
+                <h2 className=' text-base font-semibold h-5 md:text-xl md:h-auto bg-slate-200'></h2>
+              </div>
+            </div>
+            <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
+              <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
+                <div className=' w-full object-cover rounded-lg bg-slate-200 h-[200px] md:h-[400px]' />
+              </div>
+              <div className='flex flex-col text-center p-2 gap-2 '>
+                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200'></h1>
+                <h2 className=' text-base font-semibold h-5 md:text-xl md:h-auto bg-slate-200'></h2>
+              </div>
+            </div>
+            <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
+              <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
+                <div className=' w-full object-cover rounded-lg bg-slate-200 h-[200px] md:h-[400px]' />
+              </div>
+              <div className='flex flex-col text-center p-2 gap-2 '>
+                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200'></h1>
+                <h2 className=' text-base font-semibold h-5 md:text-xl md:h-auto bg-slate-200'></h2>
+              </div>
+            </div>
+            <div className='card flex flex-col gap-4 p-2 bg-white shadow-lg  rounded-md md:p-5 animate-pulse w-full'>
+              <div className='bg-slate-white rounded-lg mix-blend-multiply bg-gray'>
+                <div className=' w-full object-cover rounded-lg bg-slate-200 h-[200px] md:h-[400px]' />
+              </div>
+              <div className='flex flex-col text-center p-2 gap-2 '>
+                <h1 className='text-base font-bold md:text-2xl w-full h-5 bg-slate-200'></h1>
+                <h2 className=' text-base font-semibold h-5 md:text-xl md:h-auto bg-slate-200'></h2>
+              </div>
+            </div>
+          </>
 
-        {teamData.map((data, index) => (
-          <div onClick={() => handleOpenModal(index)} key={index} className='hover:scale-105' >
-            <motion.div key={index} className="item w-full" variants={item}>
-              <TeamMemberCard  {...data} />
-            </motion.div>
-          </div>
-        ))}
+        )}
       </motion.div>
       {modalState ? (
         <div className={`fixed bg-gray-800/50 z-30 inset-0 p-5  content-center md:p-64`}>
